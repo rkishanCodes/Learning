@@ -1,0 +1,23 @@
+#html{
+    background-color: red;
+}
+
+body{
+    outline:2px solid lime;
+
+    font-size: 40px;
+}
+
+ul
+{
+    list-style-type: circle;
+    margin-left: 20px;
+    font-size: 10px;
+}
+
+button{
+    color: pink !important;
+}
+#button{
+    color: green !important;
+}

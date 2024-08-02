@@ -1,0 +1,21 @@
+.container {
+  height: 50vh;
+  width: 50vw;
+  background-color: antiquewhite;
+  font-size: 20px;
+}
+
+html{
+    font-size: 32;
+}
+
+.box {
+  font-size: 5rem;
+
+  padding: 1rem;
+
+  height: 1rem;
+  width: 1rem;
+
+  background-color: red;
+}

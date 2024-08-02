@@ -1,0 +1,25 @@
+.percetange {
+  background-color: aquamarine;
+  width: 50vh;
+}
+
+.test {
+  background-color: rgb(237, 105, 105);
+  width: 50vw;
+  overflow: hidden;
+  padding: 2vw;
+  margin: 2vh;
+  border: 2% solid;
+  font-size: 10vw;
+  box-sizing: border-box; 
+}
+
+body {
+  width: 16rem;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
