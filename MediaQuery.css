@@ -1,0 +1,39 @@
+.container {
+  background-color: aquamarine;
+  max-width: 500px;
+  min-height: 500px;
+  border: 2px solid;
+  print-color-adjust: exact;
+  /* -webkit-print-color-adjust: exact; */
+}
+
+/* level 3 */
+/* @media (500px<= width <=700px) {
+  .container {
+    background-color: red;
+  }
+} */
+
+/* level 4 */
+
+@media (max-width: 900px) {
+  .container {
+    background-color: rgb(60, 0, 255);
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    background-color: red;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+body > * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
