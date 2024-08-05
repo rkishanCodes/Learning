@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <form id="submit">
+    <input type="text">
+    <input type="submit" value="submitted">
+  </form>
+
+  <form id="reset">
+    <input type="text">
+    <input type="reset" value="reset">
+  </form>
+
+  <form >
+    <input type="text" id="focus" placeholder="focus">
+  </form>
+
+  <form >
+    <input type="text" id="blur" placeholder="blur">
+  </form>
+
+  <form >
+    <input type="text" id="change" placeholder="change">
+  </form>
+  <form >
+    <input type="text" id="input" placeholder="input">
+  </form>
+
+<br><br><br><br><br>
+  <form id="formdata">
+    <input type="text" name="username">
+    <input type="text" name="email" >
+    <input type="submit" value="submitted">
+  </form>
+
+  <!-- <a href="https://bookmytowing.com/" target="_blank">bookmytowing</a> -->
+
+  <script>
+        // - **submit:** Occurs when a form is submitted.
+
+        const submit = document.getElementById('submit');
+        submit.addEventListener('submit',(event) => {
+          // console.log(submit.value);//submit.value will return null because form elements don't have a value property.
+          // event.preventDefault();
+          alert('You submitted the form');
+        })
+
+// const a=document.querySelector("a");
+// // console.log(a);
+// a.addEventListener('click',(event) => {
+//   event.preventDefault();
+// })
+
+// document.addEventListener('keydown', (event) => {
+//   if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+//     // event.preventDefault(); // Prevent scrolling with arrow keys
+//     // alert("hi")
+//   }
+// });
+
+// - **reset:** Occurs when a form is reset.
+
+const reset = document.getElementById('reset');
+        reset.addEventListener('reset',(event) => {
+          alert('You reset the form');
+          console.log('You reset the form');
+        })
+
+        // - **focus:** Occurs when an element gets focus.
+
+const focus = document.getElementById('focus');
+        focus.addEventListener('focus',(event) => {
+          // alert('You focus the form');
+          console.log('You focus the form');
+        })
+
+        // - **blur:** Occurs when an element loses focus.
+
+        const blur = document.getElementById('blur');
+        blur.addEventListener('blur',(event) => {
+          alert('You blur the form');
+          console.log('You blur the form');
+        })
+
+        // - **change:** Occurs when the value of an input element changes (for text fields, checkboxes, etc.).
+        const change = document.getElementById('change');
+        change.addEventListener('change',(event) => {
+          alert('You change the form');
+          console.log('You change the form to ',event.target.value,event.target);
+        })
+
+        // - **input:** Similar to 'change', but occurs immediately when the value of an input element changes.
+        const input = document.getElementById('input');
+        input.addEventListener('input',(event) => {
+          alert('You input the form');
+          console.log('You input the form to ',event.target.value,event.target);
+        })
+
+
+
+        const form=document.querySelector('#formdata');
+        // console.log(form);
+
+        form.addEventListener('submit',(event) => {
+          event.preventDefault();
+          // alert('You submitted the form');
+
+          // console.log(form.elements);
+
+          // console.log(event)
+
+          const newData=new FormData(form)
+
+          console.log(newData)
+
+          // console.log(newData.entries())
+
+
+          console.log(newData.keys())
+
+          // newData.forEach((data)=>{
+          //   console.log(data)
+          // })
+
+          for (const iterator of newData.keys()) {
+
+            console.log(newData[iterator])
+            
+          }
+          console.log(newData.get("email"))
+
+        })
+
+
+  </script>
+</body>
+</html>

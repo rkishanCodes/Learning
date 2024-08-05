@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // debugger;
+      function createUser(name, count) {
+        // console.log(this);
+        this.count = count;
+        context.call(this, name);
+      }
+
+      function context(name) {
+        this.name = name;
+      }
+
+      createUser.prototype.increment = function () {
+        this.count++;
+        console.log(this.count);
+        console.log("fi,rst  ");
+        console.log(user1);
+      };
+
+      const user1 = new createUser("kishan", 21);
+      const user2 = new createUser("kishan", 21);
+
+      // console.log(user1);
+
+      Object.prototype.a = "now Create User1";
+
+      // console.log(user1.a);
+
+      user1.__proto__.b = "now Create User2";
+      // console.log(Object().__proto__.a);
+
+      // console.log(this);
+
+      //   console.log(user1)
+      // console.log(user1);
+      // user1.increment();
+
+      const descriptor = Object.getOwnPropertyDescriptor(user1, "name");
+      // console.log(descriptor);
+      descriptor.value = "user1";
+      // console.log(descriptor);
+
+      Object.defineProperty(user1, "rank", {
+        value: 1,
+        // writable: true,
+        // enumerable: true,
+        // configurable: true,
+      });
+      // console.log(user1);
+
+      // for (const [key, value] of Object.entries(user1)) {
+      //   console.log(`${key}: ${value}`);
+      // }
+
+      // function a() {
+      //   const name = "kishan";
+
+      //   display();
+      //   function display() {
+      //     console.log(name);
+      //   }
+      //   return display;
+      // }
+      // const returnA = a();
+      // returnA()
+
+
+
+      class a{
+        constructor(name){
+          this.name=name;
+          console.log(name)
+        }
+        #hi="hiiiii"
+      }
+      const obj=new a("kishan")
+      console.log(obj.name)
+
+      const ch={
+        "#a":"aaaa"
+      }
+    </script>
+  </body>
+</html>

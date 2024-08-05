@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    window.addEventListener('load', (event) => { // entire page loaded but documet is loaded instal html and js codes
+      // Perform actions when the page has finished loading
+      console.log('Page loaded');
+      // Add more initialization tasks or event listeners here
+    });
+
+  //   window.addEventListener('unload', (event) => {
+  //   // Perform actions when the user leaves the page
+  //   console.log('Page unloaded');
+  // }
+  //   )
+
+
+  window.addEventListener('resize', (event) => {
+    // Perform actions when the browser window is resized
+    console.log('Window resized');
+    console.log('Window resized');
+    // Add code to adjust layout or content as needed
+
+    const windowWidth = window.innerWidth;
+  const windowHeight = window.innerHeight;
+
+  // Log the window size
+  console.log(`Window resized to width: ${windowWidth}, height: ${windowHeight}`);
+  });
+
+  window.addEventListener('scroll', (event) => {
+  // Perform actions when the user scrolls the page
+  console.log('Page scrolled');
+
+  // You can add code here to respond to the scroll event
+});
+
+  </script>
+  
+</body>
+</html>

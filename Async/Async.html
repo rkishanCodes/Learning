@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Async</title>
+</head>
+<body>
+  <script>
+    // debugger
+    async function ch(){
+      const url="https://dog.ceo/api/breeds/image/random"
+      // fetch(url).
+      // then((data)=>data.json()).
+      // then((data)=>console.log(data))
+
+      const response=  await fetch(url)
+      console.log(response)
+
+      const data=await response.json()
+      console.log(data)
+    } 
+    // by defualt fucntion will return , there for wihotu usng a return will reutnr undifed wich makes prmoise fulfiled with undeined 
+
+    ch()
+
+//     async function demo(){
+//     return 1
+// }
+
+//     async function test(){
+//       const result= await demo()
+//       console.log(result)
+//     }
+
+//     test()
+
+
+// function makeHttpRequest(method,url,callback){
+//         // debugger
+//       const xhr = new XMLHttpRequest()
+//       xhr.responseType = 'json'
+//       xhr.addEventListener('load', () => {
+//         // console.log(xhr);
+//         // console.log();
+//         callback(xhr.response)
+
+//       })
+
+//       xhr.open(method,url,false)
+//       xhr.send()
+
+//     }
+//     // makeHttpRequest("GET","https://dummyjson.com/users/1")
+
+//     makeHttpRequest("GET","https://dummyjson.com/users/",(data)=>{
+//       console.log(data)
+//       makeHttpRequest("GET",`https://dummyjson.com/posts/user/${data.users[0].id}`,(data)=>{
+//         console.log(data.posts)
+//       })
+//     })
+
+		
+
+
+    async function f3() {
+      const y = await 20;
+      console.log(y); // 20
+
+      const obj = {};
+      console.log((await obj) === obj); // true
+
+      // return new Promise((add)=>{
+      //     add(1)
+      // })
+      throw "Invalids"
+    }
+
+
+    f3().then((data)=>{
+      console.log(data)
+    },(err)=>{
+        console.log(err)
+    })
+
+
+    // const p= new Promise((res,rej)=>{
+    //   res("p")
+    // })
+
+    // console.log(p)
+    // p.then((data)=>{
+    //   console.log(data)
+    // })
+
+
+
+
+
+
+
+
+
+
+
+
+   
+  </script>
+</body>
+</html>

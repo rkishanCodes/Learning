@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  cursor: pointer;
+  margin: 12px 0;
+}
+</style>
+
+<body>
+  JavaScript events are actions or occurrences that happen in the system you are programming, which the system tells you about so you can respond to them as needed. 
+  
+  <div class="box" id="click">Click </div>
+  <div class="box" id="dblclick">dblclick </div>
+  <div class="box" id="mouseover">mouseover </div>
+  <div class="box" id="mouseout">mouseout </div>
+  <div class="box" id="mousemove">mousemove </div>
+  <div class="box" id="mousedown">mousedown </div>
+  <div class="box" id="mouseup">mouseup </div>
+
+
+<script>
+      // - **click:** Occurs when the user clicks an element.
+      //element.addEventListener('click', eventHandler);
+
+      //element: The HTML element to which you want to attach the event listener.
+      //addEventListener: A method used to register an event listener for the specified event on the given element.
+      // 'click': The name of the event you want to listen for (in this case, 'click').
+      // eventHandler: The function that should be executed when the event occurs.
+  // Get the element
+  const click = document.getElementById('click');
+
+  // Add event listener for 'click' event
+  click.addEventListener('click', () => {
+    alert('You clicked the box!');
+  });
+
+//    - **dblclick:** Occurs when the user double-clicks an element.
+
+
+  const dblclick = document.getElementById('dblclick');
+
+  // Add event listener for 'dblclick' event
+  dblclick.addEventListener('dblclick', () => {
+    alert('You dblclicked the box!');
+  });
+  
+
+  // - **mouseover:** Occurs when the mouse pointer enters the element.
+
+  const mouseover = document.getElementById('mouseover');
+
+// Add event listener for 'mouseover' event
+mouseover.addEventListener('mouseover', () => {
+  alert('You mouseover the box!');
+});
+
+// - **mouseout:** Occurs when the mouse pointer leaves the element.
+  const mouseout = document.getElementById('mouseout');
+
+// Add event listener for 'mouseout' event
+mouseout.addEventListener('mouseout', () => {
+  alert('You mouseout the box!');
+});
+
+// - **mousemove:** Occurs when the mouse pointer moves over the element.
+
+const mousemove = document.getElementById('mousemove');
+
+// Add event listener for 'mousemove' event
+mousemove.addEventListener('mousemove', () => {
+  alert('You mousemove the box!');
+});
+
+// - **mousedown:** Occurs when the mouse button is pressed over the element.
+
+const mousedown = document.getElementById('mousedown');
+
+// Add event listener for 'mousedown' event
+mousedown.addEventListener('mousedown', () => {
+  alert('You mousedown the box!');
+});
+//    - **mouseup:** Occurs when the mouse button is released over the element.
+const mouseup = document.getElementById('mouseup');
+
+// Add event listener for 'mouseup' event
+mouseup.addEventListener('mouseup', () => {
+  alert('You mouseup the box!');
+});
+
+
+</script>
+</body>
+</html>

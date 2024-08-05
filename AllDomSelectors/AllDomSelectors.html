@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+<style>
+  .heading{
+background-color: lightblue;
+  }
+</style>
+</head>
+<body>
+
+  <div class="heading" id="heading" >
+    <h1 class="heading-info" id="heading-info" style="color: lime;">
+Lorem ipsum dolor sit amet. <span style="display:none" id="span-ch">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</span>
+<a href="http://" target="_blank" rel="noopener noreferrer">link</a>
+    </h1>
+    <h1 class="heading-info" id="heading-info" style="color: lime;">
+Lorem ipsum dolor sit amet. <span style="display:none" id="span-ch">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</span>
+<a href="http://" target="_blank" rel="noopener noreferrer">link</a>
+    </h1>
+
+    <input type="text" placeholder="enter">
+    <input type="number" placeholder="enter">
+
+    <ul>
+      <li class="list-item">A</li>
+      <li class="list-item">B</li>
+      <li class="list-item">C</li>
+    </ul>
+    <ul>
+      <li class="list-item">A</li>
+      <li class="list-item">B</li>
+      <li class="list-item">C</li>
+    </ul>
+
+
+
+    
+
+  
+  
+</body>
+
+<script>
+
+
+  //  console.log(document.getElementById("heading-info")) // return start and end tag with its content
+  //  console.log(typeof document.getElementById("heading-info"))// objects 
+
+  // console.log(document.getElementById("heading-info").id) 
+  // console.log(typeof document.getElementById("heading-info").id) 
+
+    // console.log(typeof document.getElementById("heading-info").class) // gives undefined
+    //returns "undefined" is because the class attribute is accessed as a property called className on the HTML element in JavaScript, not directly as class.
+
+  // console.log(document.getElementById("heading-info").className)
+
+  // console.log(document.getElementById("heading-info").getAttribute('id'))
+  // console.log(document.getElementById("heading-info").getAttribute('class'))
+  // console.log(document.getElementById("heading-info").getAttribute('style'))
+  // console.log(document.getElementById("heading-info").getAttribute('abcc'))
+
+  //retrieve the value of the specified attribute of an HTML element. If the attribute does not exist, it returns null.
+
+  // console.log(document.getElementById("heading-info").setAttribute('class','test')) // returns undefind
+  // document.getElementById("heading-info").setAttribute('class','test') 
+
+
+  // //The setAttribute() method in JavaScript is used to set the value of the specified attribute on an HTML element. 
+  // //It takes two arguments: the name of the attribute to set and the value to set it to.
+
+  // document.getElementById("span-ch").setAttribute('style','color:pink')
+
+  // //The reason why you didn't see the update reflected in your HTML file is because the setAttribute() method doesn't visually update the HTML document itself.
+  // // Instead, it updates the attributes of the HTML element in memory.
+
+  // const title=document.getElementById("heading-info");
+  //    console.log(title);
+  //    console.log(title.style)// returns object therefore it conatains properties
+  //   console.log(typeof title.style)
+  //    title.style.color="red"
+  //    console.log( title.style.color)// retuns string
+
+  //  document.getElementById("heading").style.backgroundColor="lime";
+
+  //  console.log(title.innerText); // display which is visible
+  // console.log(title.textContent);// display every text content
+
+  // console.log(title.innerHTML);// display everything
+  // console.log(typeof title.innerHTML);// display everything
+
+
+
+
+
+
+
+
+// Document: getElementsByClassName() method
+
+
+  //  console.log(document.getElementsByClassName("heading"))//becase theere is no class
+
+  //  console.log(typeof document.getElementsByClassName("heading"))
+
+  // console.log(document.querySelector("h1"))
+
+  // console.log(typeof document.querySelector("h1"))
+
+  // console.log(document.querySelector("*"))
+
+  // console.log(document.querySelector("h1,div"));
+  //The code console.log(document.querySelector("h1,div")) will log the first element that matches either an <h1> or <div> tag in the document to the console.
+
+
+// This method selects elements using a CSS selector.
+// It returns the first element that matches the specified CSS selector within the document, or null if no matches are found.
+
+
+  // console.log(document.querySelector(".heading"))
+
+  // console.log(document.querySelector('input[type="text"]'))
+  // console.log(document.querySelector('input[type="number"]'))
+  // console.log(document.querySelector(typeof 'input[type="number"]')) 
+  // console.log(typeof document.querySelector(typeof 'input[type="number"]')) 
+  // the typeof operator is applied to the string 'input[type="number"]', so it will always return "string". 
+  //This means document.querySelector(typeof 'input[type="number"]') is equivalent to document.querySelector("string"). its not you dumbAss because string is csss selector 
+
+
+  // console.log(typeof document.querySelector( 'input[type="number"]')) 
+
+  const ul=document.querySelector("ul");
+  // console.log(ul);
+  // console.log(typeof ul);// html elements are consid ers as tags
+
+  // const li=ul.querySelector("li");
+  const li=ul.querySelectorAll("li");
+    console.log(li);
+    console.log(typeof li);
+
+  // const li=document.querySelector("li");  // both have diff how the acces and scoped
+  // console.log(li);
+  // console.log(typeof li);// html elements are considers as tags
+
+  // li.style.backgroundColor="red";
+  // li.innerHTML="<b>D</b>"
+
+  // const liElements = document.querySelectorAll("li");
+  // console.log(liElements)
+  // console.log(typeof liElements)
+
+  // console.log(liElements.entries())
+
+//   const array = [2, 3];
+// const iterator = array.entries();
+// for (const entry of iterator) {
+//   console.log(entry);
+// }
+
+// liElements.style.color="red"//ncaught TypeError: Cannot set properties of undefined (setting 'color')
+// liElements[0].style.color="red"
+
+// liElements[9].style.color="red"//Uncaught TypeError: Cannot read properties of undefined (reading 'style')
+
+// liElements.forEach((ele)=>{
+//   console.log(ele)// resturns tags
+//   console.log(typeof ele)
+//   ele.style.color="lime"
+// })
+
+const elements = document.getElementsByClassName("list-item");
+console.log(elements);
+console.log(typeof elements);
+
+// elements.forEach((ele)=>{
+//   console.log(ele)
+
+// }) // not iterable
+
+//need to convert into array
+
+
+// Array.from(elements).forEach((ele)=>{
+//   console.log(ele)
+// })
+
+
+// Converting HTMLCollection to an array using spread operator and then using forEach()
+// [...elements].forEach(element => {
+//   console.log(element);
+// });
+
+
+// console.log(elements[0])
+
+
+
+
+</script>
+</html>

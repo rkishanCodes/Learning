@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-16">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+  font-family:  Arial, sans-serif;
+}
+  </style>
+</head>
+<body>
+  <h1 id="document">DOCUMENT</h1>
+  <h1>DOCUMENT1</h1>
+
+
+  <form action="">
+    <input type="button" value="button">
+  </form>
+  <form action="" id="fomr1">
+    <input type="button" value="button">
+  </form>
+
+  <img src="image.jpg" alt="">
+
+  <div id="dynamicContent"></div>
+  <a href="http://google.com"></a>
+
+
+  <button onclick="enableEditing()">Enable Editing</button>
+  <button onclick="disableEditing()">Disable Editing</button>
+  <div>
+      <p>This is an editable document.</p>
+      <p>Try clicking on the buttons above to enable/disable editing.</p>
+  </div>
+
+
+</body>
+
+<script>
+  // Check if any element in the document currently has focus
+// if (document.activeElement) {
+//     console.log("The currently focused element is:", document.activeElement);
+// } else {
+//     console.log("No element currently has focus.");
+// }
+
+// const adoptedStylesheets = document.adoptedStyleSheets;
+// console.log(adoptedStylesheets); // Array-like object containing the adopted stylesheets
+
+// // Create a new CSSStyleSheet object
+// const newStylesheet = new CSSStyleSheet();
+
+// // Add CSS rules to the stylesheet
+// newStylesheet.insertRule('body { background-color: lightblue; }');
+// newStylesheet.insertRule('h1 { color: red; }');
+
+// // Adopt the stylesheet by adding it to the Document.adoptedStyleSheets array
+// document.adoptedStyleSheets = [newStylesheet];
+
+
+// console.log(document);// in DOM tree model so its starts from document
+
+// console.log(typeof document);// object
+
+// console.log(document.html); // not the way to access
+
+// console.log(document.documentElement);// this is right way
+
+// console.log(document.script); wont give access to script tag
+
+// console.log(document.getElementsByName("script"));
+
+// const scriptElements = document.getElementsByTagName('script');
+
+// // Iterate over each script element in the NodeList
+// for (let i = 0; i < scriptElements.length; i++) {
+//     // Log the contents of each script element
+//     console.log(scriptElements[i].textContent);
+// }
+
+// console.log(document.p); wont work
+
+// console.log(document.characterSet); // Output: UTF-8
+
+
+// console.log(document.documentElement.childElementCount);//html:-head-body
+// console.log(document.body.childElementCount);
+
+// console.log(document.children);//only html
+
+// console.log(document.getElementsByTagName("head").children);//document.getElementsByTagName("head") returns an HTMLCollection, and HTMLCollection doesn't have a direct property called children.
+
+// const headElement = document.getElementsByTagName("head")[0]; // Access the first <head> element
+// console.log(headElement.children); // Log the children of the <head> element
+
+//   for (let i = 0; i < headElement.children.length; i++) {
+//     console.log(headElement.children[i]); // Log each child element of the <head> element
+// }
+
+// console.log(document.compatMode); // Outputs "BackCompat" or "CSS1Compat"
+// console.log(document.contentType); // Outputs something like "text/html; charset=UTF-8"
+
+// console.log(document.currentScript);//If the script is fetched from a server (i.e., it's an external script file loaded via a src attribute), and you call console.log(document.currentScript); within that script, the value returned will be null.
+
+
+// console.log(document.doctype);//<!DOCTYPE html>
+// console.log(document.documentElement);//returns the root element of the document, which is typically the <html> element.
+
+// console.log(document.documentURI);
+
+// console.log(document.embeds);
+
+// 
+// console.log(document.fonts);
+
+// document.fonts.ready.then(function() {
+//   console.log('Fonts are loaded!');
+// });
+
+// document.fonts.forEach(function(font) {
+//   console.log(font.family);
+// });
+
+
+// console.log(document.forms);
+
+// for (let i = 0; i < document.forms.length; i++) {
+//     const form = document.forms[i];
+//     console.log(form);
+// }
+
+// console.log( document.body.h1);// event its object we cant use dot operator
+// console.log(document.body.id);// for attributes
+
+// console.log(document.body[0]); wont work: <body> element is not an array
+
+//   // Create a new Document Fragment
+// var fragment = document.createDocumentFragment();
+
+// // Create some new elements
+// var div1 = document.createElement('div');
+// div1.textContent = 'Hello';
+
+// var div2 = document.createElement('div');
+// div2.textContent = 'World';
+
+// // Append elements to the Document Fragment
+// fragment.appendChild(div1);
+// fragment.appendChild(div2);
+
+// // Now, you can append the Document Fragment to the DOM
+// document.body.appendChild(fragment);
+
+// // console.log(document.documentElement);
+
+
+// fragment.childNodes.forEach(function(node) {
+//     console.log(node);
+// });
+
+
+// console.log(document.fullscreenElement);
+
+// console.log(document.head);
+// console.log(document.hidden);
+
+// console.log(document.images);
+
+// console.log(document.implementation);
+
+// // Create a new HTML document
+// var newDoc = document.implementation.createHTMLDocument('New Document');
+
+// // Access the title property of the new document
+// console.log(newDoc.title); // Logs "New Document"
+
+// // Create a new <h1> element
+// var heading = newDoc.createElement('h1');
+// heading.textContent = 'Welcome to Dynamic Document';
+
+// // Create a new <p> element
+// var paragraph = newDoc.createElement('p');
+// paragraph.textContent = 'This is a dynamically generated HTML document!';
+
+// // Append the <h1> and <p> elements to the document body
+// newDoc.body.appendChild(heading);
+// newDoc.body.appendChild(paragraph);
+
+// // Access the inner HTML of the document body
+// console.log(newDoc.body.innerHTML);
+
+// var dynamicContent = newDoc.body.innerHTML;
+
+// // Insert the dynamically generated content into an existing element in the HTML document
+// document.getElementById('dynamicContent').innerHTML = dynamicContent;
+
+
+// console.log(document.lastElementChild);// because only one element
+
+// console.log(document.body.lastElementChild);// because only one element
+
+// console.log(document.links);
+// // Iterate over the links and log their href attributes
+// for (var i = 0; i < document.links.length; i++) {
+//     console.log(document.links[i].href);
+// }
+
+// 
+
+// console.log(document.pictureInPictureEnabled);
+
+// Check if pointer lock is currently active
+// if (document.pointerLockElement !== null) {
+//     // Pointer is locked to an element
+//     console.log("Pointer is locked to:", document.pointerLockElement);
+// } else {
+//     // Pointer is not locked
+//     console.log("Pointer is not locked.");
+// }
+
+// // Listen for changes in pointer lock status
+// document.addEventListener('pointerlockchange', function() {
+//     if (document.pointerLockElement !== null) {
+//         // Pointer lock was enabled
+//         console.log("Pointer lock enabled.");
+//     } else {
+//         // Pointer lock was disabled
+//         console.log("Pointer lock disabled.");
+//     }
+// });
+
+
+// if (document.prerendering !== undefined) {
+//     if (document.prerendering) {
+//         console.log("Document is being prerendered.");
+//     } else {
+//         console.log("Document is not being prerendered.");
+//     }
+// } else {
+//     console.log("Document.prerendering is not supported or is experimental.");
+// }
+
+
+// console.log(document.scrollingElement);
+
+// document.scrollingElement.scrollTop = 100; // Scrolls the document to the top position
+
+
+// console.log(document.scrollingElement.scrollTop); // Logs the current scroll position
+
+
+// console.log(document.styleSheets);
+
+
+
+// console.log(document.timeline);
+
+
+// console.log(document.visibilityState);
+
+// console.log(document.cookie);
+// document.cookie = "username=John Doe; expires=Thu, 18 Dec 2023 12:00:00 UTC; path=/";
+// console.log(document.cookie)
+
+// console.log(document.defaultView);
+
+// function enableEditing() {
+//             document.designMode = "on";
+//         }
+
+//         function disableEditing() {
+//             document.designMode = "off";
+//         }
+
+
+// // Get the current directionality of the document
+// console.log(document.dir); // Outputs "ltr" or "rtl"
+
+// // Set the directionality of the document
+// document.dir = "rtl"; // Sets the direction to right-to-left
+
+
+// console.log(document.fullscreenEnabled);
+
+// console.log(document.lastModified);
+
+// console.log(document.location)
+
+// console.log(document.readyState);
+
+// console.log(document.referrer);
+
+
+// Get the current document title
+console.log(document.title);
+
+// Set a new document title
+document.title = "New Title";
+
+console.log(document.title);
+
+
+console.log(document.URL);
+
+
+
+
+</script>
+</html>

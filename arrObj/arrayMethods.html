@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // console.log(typeof []);
+
+    const fruits=["Zapple", "aorange", "agrapes"]
+    const myfruits=fruits
+
+    myfruits[0]=0
+
+
+
+    // console.log(fruits);
+    // console.log(fruits[-1]);
+
+
+    // fruits[6]='addedNewFruits'
+    // fruits[9]='addedNewFruits'
+
+    // console.log(fruits[5]);
+
+    // fruits.push("banana");
+    // fruits.pop("banana");
+
+
+    // console.log(fruits);
+    // fruits.firstName = "John";
+
+    // console.log(fruits);
+    // console.log(fruits["firstName"]);
+
+    // console.log(fruits.pop());//removes last element
+    // console.log(fruits.shift()); //removes first element
+
+
+      // console.log(fruits.push("newFruits"));//end
+      // console.log(fruits.unshift("newFruits"));//start both returns length
+
+      // console.log(fruits.concat("t",1,2,3));//it just appends the value what ever we give and returns array
+   
+   
+      // console.log(fruits.indexOf("o"));
+      // console.log(fruits.includes("orange"));
+
+
+      // console.log(fruits.reverse());//changes orginal array too
+
+      // console.log(fruits.sort());//changes orginal
+
+
+      // console.log(fruits.slice(0,3));//does not change orginal , end value it exludes
+
+        // console.log(fruits.splice(1))
+   
+
+
+        // console.log(fruits===myfruits);
+
+        const apk={
+name:21
+        }
+
+        const bpk=apk
+   
+   
+   console.log(apk===bpk);
+
+   console.log(apk.name);
+   bpk.name=22
+   console.log(bpk.name);
+   console.log(apk.name);
+
+   bpk.age=100
+console.log(bpk);
+console.log(apk);
+   console.log(apk===bpk);
+
+
+   
+
+
+   
+   const originalArray = [1, 2, 3, 4, 5];
+
+// Create a shallow copy of the original array using slice()
+// const shallowCopy = originalArray.slice();
+
+// Modify the shallow copy
+// shallowCopy.push(6);
+
+console.log(originalArray); // Output: [1, 2, 3, 4, 5]
+// console.log(shallowCopy);   // Output: [1, 2, 3, 4, 5, 6]
+
+   
+   
+      console.log(fruits);
+
+const originalObject = {
+  prop1: 'value1',
+  prop2: [1, 2, 3],
+};
+
+// Create a shallow copy of the original object
+const shallowCopy = Object.assign({}, originalObject);
+
+// Modify the shallow copy
+shallowCopy.prop2.push(4);
+
+console.log(originalObject); // Output: { prop1: 'value1', prop2: [1, 2, 3, 4] }
+console.log(shallowCopy);    // Output: { prop1: 'value1', prop2: [1, 2, 3, 4] }
+
+
+for (const index = 2; index < 10; index++) {
+console.log(index);  
+}
+
+  </script>
+</body>
+</html>

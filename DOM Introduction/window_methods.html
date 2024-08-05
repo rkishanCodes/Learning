@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    #animatedElement {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: absolute;
+    }
+
+    #myElement {
+        width: 100px;
+        height: 50px;
+        background-color: red;
+    }
+</style>
+</head>
+<body>
+  <!-- <button onclick="blurWindow()">Blur Window</button> -->
+  <div id="animatedElement">example</div>
+  <div id="myElement">Hello, World!</div>
+  <iframe id="myIframe" src="AllDomSelectors.html" width="400" height="300"></iframe>
+
+  <button id="openDirectoryPickerBtn">Open Directory Picker</button>
+  <button id="openFilePickerBtn">Open File Picker</button>
+  <button id="saveFilePickerBtn">Save File Picker</button>
+</body>
+
+<script>
+
+  // console.log(window.atob())// error as no arguments were passed
+  var encodedString = 'SGVsbG8gV29ybGQh'; // Example base64-encoded string
+  // var decodedString = window.atob(encodedString);
+  // console.log(decodedString); // Outputs: Hello World!
+
+  // console.log(window.alert("gsrg"))
+
+  function blurWindow() {
+  // Blurs the current window
+  window.blur();
+}  
+
+  // var stringToEncode = 'Hello World!'; // Example string to encode
+  // var encodedString = window.btoa(stringToEncode);
+  // console.log(encodedString); // Outputs: SGVsbG8gV29ybGQh
+
+  // console.log(window.cancelAnimationFrame())
+
+//   // Get a reference to the animated element
+// var animatedElement = document.getElementById('animatedElement');
+
+// // Set initial position
+// var position = 0;
+
+// // Set the maximum position to stop the animation
+// var maxPosition = 300;
+
+// // Define the animation function
+// function animate() {
+//     // Increment the position
+//     position += 1;
+
+//     // Apply the position to the element
+//     animatedElement.style.left = position + 'px';
+
+//     // Check if the animation should stop
+//     if (position < maxPosition) {
+//         // Request the next animation frame
+//         window.requestAnimationFrame(animate);
+//     }
+// }
+
+// // Start the animation
+// var requestId = window.requestAnimationFrame(animate);
+
+// // Stop the animation after a certain time (for demonstration purposes)
+// setTimeout(function() {
+//     window.cancelAnimationFrame(requestId);
+// }, 5000); // Stop after 5 seconds
+
+
+
+
+
+//   // console.log(window.cancelIdleCallback())
+
+//   // Function to be called during idle time
+// function myIdleCallback(deadline) {
+//     while (deadline.timeRemaining() > 0) {
+//         // Perform small chunks of work until the deadline is reached
+//         // This could be, for example, updating UI, preloading resources, or other non-essential tasks
+//     }
+// }
+
+// // Schedule the callback to be called during the next idle period
+// var idleCallbackId = window.requestIdleCallback(myIdleCallback);
+// console.log(idleCallbackId)
+// // Later, if needed, cancel the scheduled callback
+// window.cancelIdleCallback(idleCallbackId);
+
+// // Set an interval to execute a function once per second
+// var intervalId = setInterval(function() {
+//     console.log("Hello"); // Execute the function
+//     clearInterval(intervalId); // Stop the interval after execution
+// }, 1000);
+
+
+// // Set a timeout to log "Hello" after 3 seconds
+// var timeoutId = setTimeout(function() {
+//     console.log("Hello");
+// }, 3000);
+
+// // Later, if you want to cancel the timeout before it executes
+// clearTimeout(timeoutId);
+
+// Open a new tab
+// var newTab = window.open('https://www.example.com', '_blank');
+
+// // Close the tab after 3 seconds (for demonstration purposes)
+// setTimeout(function() {
+//     newTab.close();
+// }, 3000);
+
+// // Display a confirmation dialog with a message
+// var result = window.confirm("Are you sure you want to proceed?");
+
+// // Check the user's response
+// if (result === true) {
+//     console.log("User clicked OK.");
+// } else {
+//     console.log("User clicked Cancel.");
+// }
+
+// // Create an HTMLImageElement
+// var img = new Image();
+// img.src = '/Users/rkishan/Desktop/js learning/image.jpg';
+
+// // Create an ImageBitmap from the HTMLImageElement
+// window.createImageBitmap(img).then(function(imageBitmap) {
+//     // Use the created ImageBitmap
+//     console.log('ImageBitmap created:', imageBitmap);
+// }).catch(function(error) {
+//     // Handle any errors
+//     console.error('Error creating ImageBitmap:', error);
+// });
+
+// window.dump("Hello, world!");
+
+
+// // Make a GET request to fetch data from a URL
+// window.fetch('https://api.example.com/data')
+//   .then(response => {
+//     if (!response.ok) {
+//       throw new Error('Network response was not ok');
+//     }
+//     return response.json(); // Parse the JSON response
+//   })
+//   .then(data => {
+//     // Process the fetched data
+//     console.log('Data fetched:', data);
+//   })
+//   .catch(error => {
+//     // Handle any errors that occur during the fetch operation
+//     console.error('Error fetching data:', error);
+//   });
+
+
+//   console.log(window.find("example"))
+//   // window.focus();
+
+//   var element = document.getElementById('myElement');
+// var computedStyle = window.getComputedStyle(element);
+
+// // Log the computed style to the console
+// console.log(computedStyle.width); // Log the width of the element
+// console.log(computedStyle.height); // Log the height of the element
+// console.log(computedStyle.backgroundColor); // Log the background color of the elemen
+
+
+
+  // console.log(window.getScreenDetails())
+
+  // Get the current selection
+// var selection = window.getSelection();
+
+// // Check if there is a selection
+// if (selection.rangeCount > 0) {
+//     // Get the first range of the selection
+//     var range = selection.getRangeAt(0);
+    
+//     // Get the selected text
+//     var selectedText = range.toString();
+    
+//     // Log the selected text to the console
+//     console.log("Selected text:", selectedText);
+// } else {
+//     console.log("No text selected.");
+// }
+
+
+
+// // Define a media query string
+// var mediaQuery = "(max-width: 600px)";
+
+// // Create a MediaQueryList object based on the media query
+// var mediaQueryList = window.matchMedia(mediaQuery);
+
+// // Check if the document matches the media query initially
+// console.log("Initial match result:", mediaQueryList.matches);
+
+// // Add a listener for changes in the media query match status
+// mediaQueryList.addListener(function(event) {
+//     console.log("Media query match status changed:", event.matches);
+// });
+
+// // Later, you can also check the match status programmatically
+// console.log("Current match result:", mediaQueryList.matches);
+
+// Move the current window 100 pixels to the right and 50 pixels down
+// window.moveBy(1000, 50);
+// Move the current window to the coordinates (100, 200) on the screen
+// window.moveTo(100, 200);
+
+
+// Reference to the iframe
+// var iframe = document.getElementById('myIframe').contentWindow;
+
+// // Data to send to the iframe
+// var data = {
+//     message: 'Hello from the parent window!'
+// };
+
+// // Send data to the iframe
+// iframe.postMessage(data, 'https://example.com');
+
+
+// // Listen for messages from the parent window
+// window.addEventListener('message', function(event) {
+//     // Check if the origin is allowed
+//     if (event.origin === 'https://parent.example.com') {
+//         // Access the data sent from the parent window
+//         var receivedData = event.data;
+//         console.log('Received message:', receivedData.message);
+//     }
+// });
+
+
+  // window.print()
+
+//   var userInput = window.prompt("Please enter your name:", "John Doe");
+
+// if (userInput !== null) {
+//     console.log("Hello, " + userInput + "!");
+// } else {
+//     console.log("User canceled the prompt.");
+// }
+
+
+// window.queueMicrotask(function() {
+//     console.log("This is a microtask.");
+// });
+
+// window.onerror = function(message, source, lineno, colno, error) {
+//     // Log or report the error
+//     console.error("An error occurred:", message, "at", source, "line", lineno);
+// };
+// window.resizeBy(100, 50);
+// Resize the current window to a width of 800 pixels and a height of 600 pixels
+// window.resizeTo(800, 600);
+
+// Scroll the window by 100 pixels to the right and 200 pixels down
+// window.scrollBy(100, 200);
+
+
+// // Scroll the window to coordinates (0, 500)
+// window.scrollTo(0, 500);
+
+// // Scroll to the element with ID "targetElement"
+// var targetElement = document.getElementById("targetElement");
+// window.scrollTo(0, targetElement.offsetTop);
+// document.getElementById('openDirectoryPickerBtn').addEventListener('click', async () => {
+//       try {
+//         const directoryHandle = await window.showDirectoryPicker();
+//         console.log('Selected directory:', directoryHandle);
+//       } catch (err) {
+//         console.error('Error selecting directory:', err);
+//       }
+//     });
+
+//     // Event listener for opening file picker
+//     document.getElementById('openFilePickerBtn').addEventListener('click', async () => {
+//       try {
+//         const fileHandles = await window.showOpenFilePicker();
+//         console.log('Selected file(s):', fileHandles);
+//       } catch (err) {
+//         console.error('Error selecting file(s):', err);
+//       }
+//     });
+
+//     // Event listener for saving file picker
+//     document.getElementById('saveFilePickerBtn').addEventListener('click', async () => {
+//       try {
+//         const fileHandle = await window.showSaveFilePicker();
+//         console.log('Saved file:', fileHandle);
+//       } catch (err) {
+//         console.error('Error saving file:', err);
+//       }
+//     });
+
+
+// window.stop()
+
+
+
+</script>
+</html>

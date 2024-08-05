@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function(event) {
+  // This code will execute when the DOM content is fully loaded and ready
+  console.log('DOM content has been loaded');
+  // Perform additional initialization tasks or manipulate the DOM here
+});
+// Define the event listener function
+function hashChangeHandler(event) {
+  console.log('Hash changed:', window.location.hash);
+  // Perform actions based on the new hash value
+}
+
+// Add the event listener to the window
+window.addEventListener('hashchange', hashChangeHandler);
+
+// Simulate a hash change by setting a new hash value
+// window.location.hash = '#new-hash-value';
+
+console.log(window.location.hash);
+
+
+// to trigger on and off 
+// Add an event listener for the online event
+window.addEventListener('online', function(event) {
+  console.log('The computer is now online.');
+  // Perform actions to handle being online
+});
+
+// Add an event listener for the offline event
+window.addEventListener('offline', function(event) {
+  console.log('The computer is now offline.');
+  // Perform actions to handle being offline
+});
+
+
+  </script>
+</body>
+</html>

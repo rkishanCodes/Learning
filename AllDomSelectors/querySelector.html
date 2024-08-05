@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+ <style>
+      input[type="text"]{
+      outline: 1px solid
+    }
+ </style>
+
+
+</head>
+<body>
+  <!-- <h1>hogher h1</h1> -->
+  <div id="hello">hello
+    <h1>heading1</h1>
+  </div>
+  <div class="hi">hi
+    <h1>heading2</h1>
+    <div>
+      min div
+    </div>
+
+  </div>
+
+
+  <input type="text" placeholder="enter">
+  <input type="number" placeholder="enter">
+  <script>
+    // Document: querySelector() method
+
+    // The Document method querySelector() returns the first Element within the document that matches the specified selector, or group of selectors. If no matches are found, null is returned.
+// console.log(document.querySelector("hi"));//null
+// console.log(document.querySelector(".hi"));//<div class="hi">hi</div>
+// console.log(document.querySelector("#hello"));//<div id="hello">hello</div>
+// console.log(document.querySelector("div.hi"));//<div class="hi">hi</div>
+// console.log(document.querySelector("div#hello"));//<div id="hello">hello</div>
+// console.log(document.querySelector("div.hi#hello"));//null
+// console.log(document.querySelector("*"));
+// console.log(document.querySelector("body"));
+// console.log(document.querySelector("#hello h1"));
+// console.log(document.querySelector(".hi h1"));
+// console.log(document.querySelector("h1"));
+// console.log(document.querySelector("div,h1"));
+// console.log(document.querySelector("h1,div"));
+//  //The code console.log(document.querySelector("h1,div")) will log the first element that matches either an <h1> or <div> tag in the document to the console.
+
+
+console.log(document.querySelector(" input[type=text]"));
+console.log(document.querySelector(" input[type=text]"));
+
+  </script>
+</body>
+</html>

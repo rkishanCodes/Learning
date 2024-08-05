@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button class="resolve-btn">resolves
+
+  </button>
+  <button class="reject-btn">reject
+
+  </button>
+
+  <script>
+console.log('start')
+setTimeout(()=>{
+  console.log("timeout")
+})
+    const resolveBtn=document.querySelector('.resolve-btn')
+    const rejectBtn=document.querySelector('.reject-btn')
+
+
+    const p=new Promise((resolve,reject)=>{
+    //  debugger
+    
+      // resolve("nice1")
+
+//       setTimeout(()=>{
+//   console.log("timeout inside")
+// })
+// console.log("insde promise")
+
+  console.log("object")
+    resolveBtn.addEventListener('click',()=>{
+    console.log("promise is resolved")
+    resolve(2)
+  })
+
+  rejectBtn.addEventListener('click',()=>{
+    console.log("rejected btn")
+    reject("opps")
+  })
+    })
+
+console.log(p)
+
+const p2=p.then((data)=>{
+  console.log(data)
+  return 12
+})
+// .catch((error)=>{
+//   console.log(error)
+// }).finally(()=>{
+//   console.log("finally ")
+// })
+
+
+  </script>
+</body>
+</html>

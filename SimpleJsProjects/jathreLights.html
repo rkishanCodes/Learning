@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button>Random color generator</button>
+  <script>
+    function random(){
+      return Math.floor(Math.random()*255+1)
+    }
+    const button=document.querySelector("button");
+    button.addEventListener("click",()=>{
+document.body.style.backgroundColor=`rgb(${random()},${random()},${random()})`
+    })
+
+    setInterval(()=>{
+      button.style.backgroundColor=`rgb(${random()},${random()},${random()})`
+    },100)
+  </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="heading">
+    heading 1s
+  </div>
+  <div class="heading">
+    heading 2
+  </div>
+
+  <h2 class="heading">heading</h2>
+
+
+    <input type="text" name="1" class="input">
+    <input type="text" name="2" class="input">
+
+    <script>
+//The Element.getElementsByTagName() method returns a live HTMLCollection of elements with the given tag name.
+//All descendants of the specified element are searched, but not the element itself.
+// The returned list is live, which means it updates itself with the DOM tree automatically.
+
+
+//syntax:getElementsByTagName(tagName)
+// /tagName is the qualified name to look for. The special string "*" represents all elements. For compatibility with XHTML, lower-case should be used.
+//A live HTMLCollection of elements with a matching tag name, in the order they appear. If no elements are found, the HTMLCollection is empty.
+
+const element=document.getElementsByTagName("input")
+console.log(element);
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  Callback function
+
+A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.
+<br><br>
+Types of Callbacks: <br>
+a. Synchronous Callbacks: <br>
+These callbacks are executed immediately by the function to which they are passed. They don't involve any asynchronous operations.
+<br><br>
+Asynchronous Callbacks: <br>
+These callbacks are executed at a later time, typically after some asynchronous operation completes, such as fetching data from a server or reading a file.
+<br><br>
+5. Nested Callbacks (Callback Hell): <br>
+When dealing with multiple asynchronous operations, nesting callbacks can lead to deeply nested code, also known as "callback hell." This makes code hard to read and maintain.
+
+
+
+<script>
+  // function a(callback){
+  //   callback();
+  //   console.log("A");
+
+  // }
+  // a(()=>{console.log("B")})
+
+//a. Synchronous Callbacks:
+
+
+  // function a(callback){
+  //   console.log("before callback");
+  //   callback();
+  //   console.log("after callback");
+
+  // }
+  // a(()=>{console.log("inside callback");})
+
+  // function aysnc(callback){
+  //   console.log("before callback");
+  //   setTimeout(()=>{
+  //     callback();
+  //   console.log("after callback");
+  //   },2000)
+
+  // }
+  // aysnc(()=>{console.log("inside callback");})// we will alyes the pass reference it wont exececute unlse it is called
+
+
+  function asyncwitherrors(callback){
+    setTimeout(()=>{
+    const error=Math.random()<0.5?new Error("less then .5"):null;
+    if(error){
+    callback(error,null);
+    }
+    else{
+      callback(null,"data is above than .5");
+    }
+    },1000)
+
+
+
+  }
+  asyncwitherrors((error,data)=>{
+    if(error){
+      console.log("error",data);
+    }
+    else{
+      console.log("data",data);
+    }
+  })
+  asyncFunction1(() => {
+  asyncFunction2(() => {
+    asyncFunction3(() => {
+      // More nested callbacks...
+    });
+  });
+});
+
+</script>
+</body>
+</html>

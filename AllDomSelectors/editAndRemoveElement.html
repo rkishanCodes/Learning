@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body style="background-color: black;color:white;font-size: 26px;">
+
+<div class="parent">
+  <div class="day">Monday</div>
+</div> 
+<script>
+
+  function addDay(day){
+    const newDiv= document.createElement("div");
+    newDiv.classList.add("day");
+    newDiv.innerHTML = day// issue is traveses the tree
+    document.querySelector(".parent").appendChild(newDiv)
+
+  }
+   addDay("Tuesday")
+   addDay("wednesday")
+
+   function efficientAddDay(day){
+    const newDiv= document.createElement("div");
+    newDiv.classList.add("day");
+    // document.querySelector(".parent").appendChild(newDiv.appendChild(document.createTextNode(day)));// right to left
+    newDiv.appendChild(document.createTextNode(day))
+    document.querySelector(".parent").appendChild(newDiv)
+   }
+   efficientAddDay("Thursday")
+
+
+console.log(document.querySelector(".day:nth-child(3)").textContent)
+const secondDay=document.querySelector(".day:nth-child(3)")
+
+const newDiv = document.createElement("div")
+newDiv.classList.add("today")
+
+newDiv.appendChild(document.createTextNode("Today"))
+
+secondDay.replaceWith(newDiv)
+
+console.log(newDiv.outerHTML)
+
+newDiv.outerHTML="<div>outerhtml</div>"
+
+// document.querySelector(".parent").remove()
+
+// document.querySelector(".parent").children[0].remove()
+document.querySelector(".parent>:first-child").remove()//this will reomed, then second will be the finrst one
+document.querySelector(".parent>:first-child").remove()
+document.querySelector(".parent>:last-child").remove()
+
+
+
+
+
+
+</script>  
+</body>
+
+</html>
