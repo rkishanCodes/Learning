@@ -1,4 +1,4 @@
-console.log('Program Start')
+console.log("Program Start");
 
 // debugger
 // let i = 0
@@ -7,14 +7,14 @@ console.log('Program Start')
 //   i++
 // }
 
-// for(let i = 0; i < 5; i++) { 
+// for(let i = 0; i < 5; i++) {
 //     console.log(i);
 // }
 
-let i = 0 
+let i = 0;
 do {
-    console.log(i);
-    i++
-} while (i < 5)
+  console.log(i);
+  i++;
+} while (i > 5);
 
-console.log('Program Ended')
+console.log("Program Ended");

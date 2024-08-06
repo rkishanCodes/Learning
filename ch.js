@@ -1,12 +1,12 @@
-console.log(a);
-var a=10
+var h = 5;
 
-function hey() {
-  if (true) {
-    let a = "nice";
-  }
-
-  console.log(a);
+switch ("b") {
+  case "a":
+    console.log("a");
+    break;
+  case "b":
+    console.log(`${h}`);
+    break;
+  default:
+    console.log("defulat");
 }
-
-hey();

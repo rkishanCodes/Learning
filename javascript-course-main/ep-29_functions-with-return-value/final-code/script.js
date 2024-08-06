@@ -1,9 +1,12 @@
-function addTwoNumbers(a, b) {
+
 debugger
+function addTwoNumbers(a, b) {
 
     return a + b
+
+    console.log("object");
 }
 
-// const result = addTwoNumbers(56, 6)
+const result = addTwoNumbers(56, 6)
 
-// console.log(result);
+console.log(result);

@@ -1,25 +1,27 @@
-// debugger
+debugger
 
 console.log(a)
 
 var a = 'Anurag'
 
-hi()
+const b="kiki"
+
+// hi()
 
 
-// Function Definition
-// Function Declaration
-function hi() {
-    console.log('Hello');
-}
+// // Function Definition
+// // Function Declaration
+// function hi() {
+//     console.log('Hello');
+// }
 
-// Function Definition
-// Function Expression
-var sayHi = function() {    //anonymous function
-    console.log('Hiii');
-}
+// // Function Definition
+// // Function Expression
+// var sayHi = function() {    //anonymous function
+//     console.log('Hiii');
+// }
 
-// IIFE
+// // IIFE
 
 
-sayHi()
+// sayHi()
