@@ -1,13 +1,13 @@
-// const user={
-//   userName:"kishan",
-//   welcomeMessage:function(){
-//     // console.log(`welcome user ${userName}`);//ReferenceError: userName is not defined
-//     console.log(`welcome user ${this.userName}`);//dynamic reference to the object instance.
-//     // console.log(`welcome user ${user.userName}`);
+const user={
+  userName:"kishan",
+  welcomeMessage:function(){
+    // console.log(`welcome user ${userName}`);//ReferenceError: userName is not defined
+    console.log(`welcome user ${this.userName}`);//dynamic reference to the object instance.
+    // console.log(`welcome user ${user.userName}`);
 
-//     console.log(this);
-//   }
-// }
+    console.log(this);
+  }
+}
 
 // user.welcomeMessage()
 
@@ -107,9 +107,9 @@
 // const obj=()=>{name:"kishan"}//in an arrow function without parentheses, JavaScript considers it as a block of code rather than an object literal.
 // const obj=()=>{ return {name:"kishan"}}
 
-const obj=()=>({name:"kishan"})
+// const obj=()=>({name:"kishan"})
 
 
 
-console.log(obj())
+// console.log(obj())
 

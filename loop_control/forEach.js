@@ -3,6 +3,7 @@ const arr=["javascript","css","html"]
 const printElement = element => {
   console.log(element);
 };
+
 printElement("1")//1
 printElement() // undefined
 
