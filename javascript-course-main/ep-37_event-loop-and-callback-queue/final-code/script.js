@@ -1,14 +1,22 @@
-console.log('Hi-1');
+console.log("Hi-1");
 
 function hello() {
-    console.log('Hello World!');
+  console.log("Hello World!");
 }
 
-for(let i = 1; i <=4; i++){
-    console.log(i);
+for (let i = 1; i <= 0; i++) {
+  console.log(i);
 }
 
-hello()
-setTimeout(hello, 0)
+hello();
 
-console.log('Hi-2');
+setTimeout(hello, 1000);
+setTimeout(function(){
+  console.log("o sec hello");
+}, 0);
+
+console.log("Hi-2");
+
+for (let i = 1; i <= 0; i++) {
+  console.log(i);
+}
