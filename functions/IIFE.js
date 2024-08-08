@@ -11,9 +11,6 @@
 //   console.log(`welcome ${name}`)
 // })("kishan"); // if not given TypeError: (intermediate value)(...) is not a function 
 
-// ( function(name){
-//   console.log(`welcome ${name}`)
-// })("kishan"); // if not given TypeError: (intermediate value)(...) is not a function 
 
 // a()//TypeError: a(...) is not a function
 
@@ -66,3 +63,7 @@ console.log(typeof a);
 
 // var arr;
 // console.log(arr);
+
+
+
+

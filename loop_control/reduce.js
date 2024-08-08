@@ -15,7 +15,8 @@ const newArray=array.reduce(
     return accumalator+currentValue 
     // console.log(`accumalator ${accumalator} and currentValue ${currentValue}`); //wont exceute after return function
 
-  }//initialValue his is optional
+  }
+  //initialValue is optional
   // The first time that the callback is run there is no "return value of the previous calculation". 
   // If supplied, an initial value may be used in its place. Otherwise the array element at index 0 is used as
   //  the initial value and iteration starts from the next element (index 1 instead of index 0).
@@ -46,8 +47,3 @@ const newArrayString=string.reduce(
 console.log(newArrayString );
 
 
-function hi(a) {
-  console.log(a);
-}
-
-hi(); 
