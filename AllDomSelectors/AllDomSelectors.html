@@ -78,12 +78,12 @@ Lorem ipsum dolor sit amet. <span style="display:none" id="span-ch">Lorem, ipsum
   // //The reason why you didn't see the update reflected in your HTML file is because the setAttribute() method doesn't visually update the HTML document itself.
   // // Instead, it updates the attributes of the HTML element in memory.
 
-  // const title=document.getElementById("heading-info");
-  //    console.log(title);
-  //    console.log(title.style)// returns object therefore it conatains properties
-  //   console.log(typeof title.style)
-  //    title.style.color="red"
-  //    console.log( title.style.color)// retuns string
+  const title=document.getElementById("heading-info");
+    //  console.log(title);
+    //  console.log(title.style)// returns object therefore it conatains properties
+    // console.log(typeof title.style)
+    //  title.style.color="red"
+    //  console.log( title.style.color)// retuns string
 
   //  document.getElementById("heading").style.backgroundColor="lime";
 
@@ -91,7 +91,7 @@ Lorem ipsum dolor sit amet. <span style="display:none" id="span-ch">Lorem, ipsum
   // console.log(title.textContent);// display every text content
 
   // console.log(title.innerHTML);// display everything
-  // console.log(typeof title.innerHTML);// display everything
+  // console.log(typeof title.innerHTML);
 
 
 
@@ -103,7 +103,7 @@ Lorem ipsum dolor sit amet. <span style="display:none" id="span-ch">Lorem, ipsum
 // Document: getElementsByClassName() method
 
 
-  //  console.log(document.getElementsByClassName("heading"))//becase theere is no class
+  //  console.log(document.getElementsByClassName("heading"))//becase theere is no class in js
 
   //  console.log(typeof document.getElementsByClassName("heading"))
 
@@ -139,8 +139,8 @@ Lorem ipsum dolor sit amet. <span style="display:none" id="span-ch">Lorem, ipsum
 
   // const li=ul.querySelector("li");
   const li=ul.querySelectorAll("li");
-    console.log(li);
-    console.log(typeof li);
+    // console.log(li);
+    // console.log(typeof li);
 
   // const li=document.querySelector("li");  // both have diff how the acces and scoped
   // console.log(li);
@@ -173,8 +173,8 @@ Lorem ipsum dolor sit amet. <span style="display:none" id="span-ch">Lorem, ipsum
 // })
 
 const elements = document.getElementsByClassName("list-item");
-console.log(elements);
-console.log(typeof elements);
+// console.log(elements);
+// console.log(typeof elements);
 
 // elements.forEach((ele)=>{
 //   console.log(ele)
