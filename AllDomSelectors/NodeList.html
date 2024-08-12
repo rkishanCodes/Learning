@@ -1,121 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
   <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <div class="heading">
-    heading 1s
-  </div>
-  <div class="heading" id="headingID">
-    heading 2
-  </div>
+  <html lang="en">
 
-<div id="parent"><div class="day">Monday</div><div class="day">Tuesday</div></div>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
 
+  <body>
+    <div class="heading">
+      heading 1s
+    </div>
+    <div class="heading" id="headingID">
+      heading 2
+    </div>
 
- <script>
+    <div id="parent">
+      parent
+      <div class="child"></div>
 
+    </div>
 
-// Purpose:
-// A NodeList in JavaScript represents a collection of nodes (typically elements) returned by DOM methods such as querySelectorAll, childNodes, or parentNode.childNodes.
-
-
-//Static Collection:
-//Unlike HTMLCollection, a NodeList is typically static, meaning it does not automatically update when the DOM changes.
-
-
-  // const element= document.querySelectorAll("div")
-  // console.log(element);
-  // const newDiv=document.createElement("div");
-  // const content=document.createTextNode("div content");
-  // newDiv.appendChild(content);
-
-  // console.log(element);// no change in number of div elements
+    <form>
+      <input type="text" name="username" value="John">
+      <input type="text" name="username" value="Jane">
+      <input type="text" name="email" value="john@example.com">
+    </form>
+    <script>
 
 
-
-  //The exception to this rule is when the NodeList is created from certain live collections like childNodes of a live node or parentNode.childNodes.
-  const parent=document.getElementById("parent");
-  console.log(parent);
-  console.log(parent.childNodes);//text represents whitespace
-
-  console.log(parent.children);//gives HTML collection 
-
-  let childNodes=parent.childNodes
-  //  NodeList is live, which means that changes in the DOM automatically update the collection.
-  console.log(childNodes.length);
-  parent.appendChild(document.createElement("div"));
-  console.log(childNodes.length);
+      // Purpose:
+      // A NodeList in JavaScript represents a collection of nodes (typically elements) returned by DOM methods such as querySelectorAll, childNodes, or parentNode.childNodes.
 
 
-//Acessing Nodes:
-//Nodes in a NodeList can be accessed by index, similar to accessing elements in an array. For example, nodeList[0] accesses the first node in the list.
+      //Static Collection:
+      //Unlike HTMLCollection, a NodeList is typically static, meaning it does not automatically update when the DOM changes.
 
- console.log(childNodes["0"]);
+      var usernameElements = document.getElementsByName('username');
+
+      // const element = document.querySelectorAll("div")
+      // console.log(element);
+      // const newDiv = document.createElement("div");
+      // // const content = document.createTextNode("div content");
+      // // newDiv.appendChild(content);
+
+      // document.body.appendChild(newDiv);
+
+      // console.log(element);// no change in number of div elements
 
 
 
-//Properties:
-// length: Property indicating the number of nodes in the NodeList.
+      //The exception to this rule is when the NodeList is created from certain live collections like childNodes of a live node or parentNode.childNodes.
+      const parent = document.getElementById("parent");
+      // console.log(parent);
+      // console.log(parent.childNodes);//text represents whitespace
 
- console.log(childNodes.length);
+      // console.log(parent.children);//gives HTML collection
 
-  // Using item() method to access nodes by index
-
-  console.log(childNodes.item(0));
-  console.log(childNodes.item(0).textContent);
-  childNodes.item(0).textContent="knsg;kjn;jk"
-  console.log(childNodes.item(0).textContent);
-
-  childNodes.forEach(node => {
-            console.log(node);
-            console.log(node.textContent);
-        });
+      let childNodes = parent.childNodes
+      //  NodeList is live, which means that changes in the DOM automatically update the collection.
+      // console.log(childNodes.length);
+      // parent.appendChild(document.createElement("div"));
+      // console.log(childNodes.length); // live
 
 
-        const childInterator=childNodes.entries()
+      //Acessing Nodes:
+      //Nodes in a NodeList can be accessed by index, similar to accessing elements in an array. For example, nodeList[0] accesses the first node in the list.
 
-        for( const [index,value] of childInterator){
-          console.log(index);
-          console.log(value);
-
-        }
-
-        const valueIterator = childNodes.values();
-        console.log(valueIterator);
-        for (const node of valueIterator) {
-            console.log(`Node: ${node.textContent}`);
-        }
-
-        for (const node of childNodes) {
-            console.log(`Node: ${node.textContent}`);
-        }
-
-
-        const keyIterator = childNodes.keys();
-        for (const index of keyIterator) {
-            console.log(`Index: ${[index]}`);
-        }
+      // console.log(childNodes["1"].nodeType);
 
 
 
+      //Properties:
+      // length: Property indicating the number of nodes in the NodeList.
+
+      //  console.log(childNodes.length);
+
+      // Using item() method to access nodes by index
+
+      // console.log(childNodes.item(0));
+      // console.log(childNodes.item(0).textContent);
+      // childNodes.item(0).textContent="knsg;kjn;jk"
+      // console.log(childNodes.item(0).textContent);
+
+      // childNodes.forEach(node => {
+      //           console.log(node);
+      //           console.log(node.textContent);
+      //       });
+
+
+            // const childInterator=childNodes.entries()
+
+            // for( const [index,value] of childInterator){
+            //   console.log(index);
+            //   console.log(value);
+
+            // }
+
+      //       const valueIterator = childNodes.values();
+      //       console.log(valueIterator);
+      //       for (const node of valueIterator) {
+      //           console.log(`Node: ${node.textContent}`);
+      //       }
+
+      //       for (const node of childNodes) {
+      //           console.log(`Node: ${node.textContent}`);
+      //       }
+
+
+      //       const keyIterator = childNodes.keys();
+      //       for (const index of keyIterator) {
+      //           console.log(`Index: ${[index]}`);
+      //       }
 
 
 
- </script>
 
+
+
+    </script>
+
+  </body>
+
+  </html>
 </body>
-</html>
-</body>
+
 </html>

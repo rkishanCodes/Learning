@@ -44,7 +44,6 @@
     //methods for Creating HTMLCollections:
     //getElementsByTagName(tagName): Returns a live HTMLCollection of elements with the specified tag name.
     //getElementsByClassName(className): Returns a live HTMLCollection of elements with the specified class name.
-    //getElementsByName(name): Returns a live HTMLCollection of elements with the specified name attribute.
 
     // console.log(document.getElementsByClassName("heading"));
     // console.log(document.getElementsByTagName("input"));
@@ -89,6 +88,53 @@
     //  HTMLCollection is not an array, so to use array methods like map, forEach, filter, etc., you need to convert it to an array.
     // •	Array.from(): A built -in method to easily convert array - like objects, including HTMLCollection, into arrays.
     // •	Spread Operator: Another simple way to convert an HTMLCollection to an array.
+
+
+
+
+
+
+
+
+
+  // // Get all <div> elements
+  // var divs = document.getElementsByTagName('div');
+
+  // // Access the first <div> element
+  // var firstDiv = divs[0];
+  // console.log(firstDiv);
+
+  // // Access the second <div> element
+  // var secondDiv = divs[1];
+  // console.log(secondDiv);
+
+
+
+
+  // // Get all <p> elements
+  //   var paragraphs = document.getElementsByTagName('p');
+
+  //   // Access the first <p> element using item()
+  //   var firstParagraph = paragraphs.item(0);
+  //   console.log(firstParagraph);
+
+  //   // Access the second <p> element using item()
+  //   var secondParagraph = paragraphs.item(1);
+  //   console.log(secondParagraph);
+
+
+
+  //   // Assume the HTML has an element like <input type="text" name="username" id="usernameInput">
+  //     var inputs = document.getElementsByTagName('input');
+
+  //     // Access the input element by its name attribute
+  //     var usernameInputByName = inputs.namedItem('username');
+  //     console.log(usernameInputByName);
+
+  //     // Access the input element by its id attribute
+  //     var usernameInputById = inputs.namedItem('usernameInput');
+  //     console.log(usernameInputById);
+
 
   </script>
 
