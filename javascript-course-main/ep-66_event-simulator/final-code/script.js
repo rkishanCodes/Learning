@@ -12,10 +12,10 @@ addCardBtn.addEventListener('click', () => {
   container.append(newCard)
 })
 
-// setTimeout(() => {
-//     input.focus()
-//     console.log('Input Focused');
-// }, 1000)
+setTimeout(() => {
+    input.focus()
+    console.log('Input Focused');
+}, 1000)
 
 // setTimeout(() => {
 //     input.blur()
