@@ -93,3 +93,4 @@ inputFields.forEach((input) => {
     localStorage.setItem('allGoals', JSON.stringify(allGoals))
   })
 })
+ 

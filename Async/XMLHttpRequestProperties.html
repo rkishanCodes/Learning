@@ -19,7 +19,8 @@
 
 //XMLHttpRequest.response Read only
 //Returns an ArrayBuffer, a Blob, a Document, a JavaScript object, or a string, depending on the value of XMLHttpRequest.responseType, that contains the response entity body.
-//he XMLHttpRequest.XMLHttpRequest.responseText Read only
+
+//The XMLHttpRequest.XMLHttpRequest.responseText Read only
 // Returns a string that contains the response to the request as text, or null if the request was unsuccessful or has not yet been sent.
 // response property is a read-only property that contains the response entity body. 
 
@@ -39,7 +40,7 @@
 var xhr = new XMLHttpRequest();
   // xhr.responseType = 'json';
 
-  xhr.withCredentials=true
+//   xhr.withCredentials=true
 
   xhr.onreadystatechange = function() {
     // console.log("XHR readystate ",xhr.readyState);
@@ -49,18 +50,20 @@ var xhr = new XMLHttpRequest();
 
     // console.log("XHR status text",xhr.statusText);
     
-    console.log("XHR timeout",xhr.timeout);
+    // console.log("XHR timeout",xhr.timeout);
 
-    // console.log("XHR  xwithCredentials ",xhr.xhr.withCredentials );
+    // console.log("XHR  xwithCredentials ",xhr.withCredentials );
 
         
 
   if (xhr.readyState == XMLHttpRequest.DONE) {
       if (xhr.status == 200) {
-          console.log(xhr.responseText);
-          // console.log("XHR responseType ",typeof xhr.responseType);
-          // console.log(xhr.responseXML);//cannot be parsed as XML or HTML, XMLHttpRequest.responseXML will return null.
-          // console.log("XHR status text",xhr.statusText);
+        //   console.log(xhr.responseText);
+        //   console.log("XHR responseType ",typeof xhr.responseType);
+        //   console.log(xhr.responseXML);//cannot be parsed as XML or HTML, XMLHttpRequest.responseXML will return null.
+          console.log("XHR status text",xhr.statusText);
+          console.log(JSON.parse(xhr.response));
+        console.log(xhr.response);
 
       } else {
           console.error('Error:', xhr.status);
@@ -68,38 +71,38 @@ var xhr = new XMLHttpRequest();
   }
   };
 
-  xhr.open('GET', 'https://jsonplaceholder.typicode.com/todos/1', true);
+  xhr.open('GET', 'https://dog.ceo/api/breeds/image/random', true);
 
   xhr.send()
 
-  var xhr1 = new XMLHttpRequest();
+//   var xhr1 = new XMLHttpRequest();
 
 // Define event handler for readyState changes
-xhr1.onreadystatechange = function() {
-    switch(xhr1.readyState) {
-        case XMLHttpRequest.UNSENT:
-            console.log('State: UNSENT - The request has not been initialized.');
-            break;
-        case XMLHttpRequest.OPENED:
-            console.log('State: OPENED - The request has been opened, but the send() method has not yet been called.');
-            break;
-        case XMLHttpRequest.HEADERS_RECEIVED:
-            console.log('State: HEADERS_RECEIVED - The send() method has been called, and headers and status are available.');
-            break;
-        case XMLHttpRequest.LOADING:
-            console.log('State: LOADING - The response is being received. responseText holds the partial data received up to the moment.');
-            break;
-        case XMLHttpRequest.DONE:
-            console.log('State: DONE - The request is completed, and the response data is fully available.');
-            break;
-        default:
-            console.log('Unknown state');
-    }
-};
+// xhr1.onreadystatechange = function() {
+//     switch(xhr1.readyState) {
+//         case XMLHttpRequest.UNSENT:
+//             console.log('State: UNSENT - The request has not been initialized.');
+//             break;
+//         case XMLHttpRequest.OPENED:
+//             console.log('State: OPENED - The request has been opened, but the send() method has not yet been called.');
+//             break;
+//         case XMLHttpRequest.HEADERS_RECEIVED:
+//             console.log('State: HEADERS_RECEIVED - The send() method has been called, and headers and status are available.');
+//             break;
+//         case XMLHttpRequest.LOADING:
+//             console.log('State: LOADING - The response is being received. responseText holds the partial data received up to the moment.');
+//             break;
+//         case XMLHttpRequest.DONE:
+//             console.log('State: DONE - The request is completed, and the response data is fully available.');
+//             break;
+//         default:
+//             console.log('Unknown state');
+//     }
+// };
 
 // Open and send a GET request
-xhr1.open('GET', 'https://jsonplaceholder.typicode.com/todos/1', true);
-xhr1.send();
+// xhr1.open('GET', 'https://jsonplaceholder.typicode.com/todos/1', true);
+// xhr1.send();
 
 
 //   // Accessing channel property (specific to Mozilla)
