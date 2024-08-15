@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
   <button class="resolve-btn">resolves
 
@@ -14,49 +16,82 @@
   </button>
 
   <script>
-console.log('start')
-setTimeout(()=>{
-  console.log("timeout")
-})
-    const resolveBtn=document.querySelector('.resolve-btn')
-    const rejectBtn=document.querySelector('.reject-btn')
+    // console.log('start')
+    // setTimeout(()=>{
+    //   console.log("timeout")
+    // })
+    // console.log("end");
 
 
-    const p=new Promise((resolve,reject)=>{
-    //  debugger
-    
-      // resolve("nice1")
 
-//       setTimeout(()=>{
-//   console.log("timeout inside")
-// })
-// console.log("insde promise")
+    const resolveBtn = document.querySelector('.resolve-btn')
+    const rejectBtn = document.querySelector('.reject-btn')
 
-  console.log("object")
-    resolveBtn.addEventListener('click',()=>{
-    console.log("promise is resolved")
-    resolve(2)
-  })
 
-  rejectBtn.addEventListener('click',()=>{
-    console.log("rejected btn")
-    reject("opps")
-  })
+    const p = new Promise((resolve, reject) => {
+      //  debugger
+      console.log("object");
+
+      for (let i = 0; i < 5; i++) {
+        console.log(i);
+      }
+
+      resolve("nice1")
+
+      //       setTimeout(()=>{
+      //   console.log("timeout inside")
+      // })
+      // console.log("insde promise")
+
+      // console.log("object")
+      //   resolveBtn.addEventListener('click',()=>{
+      //   console.log("promise is resolved")
+      //   resolve(2)
+      // })
+
+      // rejectBtn.addEventListener('click',()=>{
+      //   console.log("rejected btn")
+      //   reject("opps")
+      // })
     })
 
-console.log(p)
+    console.log(p)
 
-const p2=p.then((data)=>{
-  console.log(data)
-  return 12
-})
-// .catch((error)=>{
-//   console.log(error)
-// }).finally(()=>{
-//   console.log("finally ")
-// })
+    p.then((data) => {
+      console.log(data);
+    })
+
+
+    const promise1 = new Promise((resolve) => {
+      console.log("Promise 1 started");
+      setTimeout(() => {
+        console.log("Promise 1 resolved");
+        resolve("Result 1");
+      }, 2000);
+    });
+
+    const promise2 = new Promise((resolve) => {
+      console.log("Promise 2 started");
+      setTimeout(() => {
+        console.log("Promise 2 resolved");
+        resolve("Result 2");
+      }, 1000);
+    });
+
+    promise1.then(console.log);
+    promise2.then(console.log);
+    // const p2=p.then((data)=>{
+    //   console.log(data)
+    //   return 12
+    // })
+    // .catch((error)=>{
+    //   console.log(error)
+    // }).finally(()=>{
+    //   console.log("finally ")
+    // })
 
 
   </script>
 </body>
+
 </html>

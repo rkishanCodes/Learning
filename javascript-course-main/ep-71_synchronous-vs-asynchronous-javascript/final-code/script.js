@@ -1,5 +1,5 @@
 const image = document.querySelector('img')
-const button = document.querySelector('button')
+const button = document.querySelector('button') 
 
 button.addEventListener('click', () => {
   const xhr = new XMLHttpRequest()
@@ -23,13 +23,13 @@ button.addEventListener('click', () => {
 
 
 
-// const blockingBtn = document.querySelector('.blocking-btn')
+const blockingBtn = document.querySelector('.blocking-btn')
 
-// blockingBtn.addEventListener('click', () => {
-//   const startTime = Date.now()
-//   let currentTime = startTime
+blockingBtn.addEventListener('click', () => {
+  const startTime = Date.now()
+  let currentTime = startTime
 
-//   while (startTime + 4000 > currentTime) {
-//     currentTime = Date.now()
-//   }
-// })
+  while (startTime + 4000 > currentTime) {
+    currentTime = Date.now()
+  }
+})
