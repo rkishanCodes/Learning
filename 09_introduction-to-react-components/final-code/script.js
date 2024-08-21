@@ -1,0 +1,62 @@
+import { createRoot } from "react-dom/client";
+import "./style.css";
+import React from "react";
+
+function Card(props) {
+  const { title, image, brand, price } = props;
+  return (
+    <div className="card">
+      <img src={image} alt="iphone" />
+      <div className="card-content">
+        <h3>{title}</h3>
+        <p>{brand}</p>
+        <p>
+          <b>${price}</b>
+        </p>
+      </div>
+    </div>
+  );
+}
+
+function Ch() {
+  return <h2>helo world</h2>;
+}
+
+const root = createRoot(document.getElementById("root"));
+
+console.log("Hello world!!!");
+
+// fetch('https://dummyjson.com/products')
+//   .then((res) => res.json())
+//   .then((data) => {
+//     root.render(
+//       <div className="container">
+//         {data.products.map((product) => {
+//           return (
+//             <Card
+//               key={product.id}
+//               title={product.title}
+//               brand={product.brand}
+//               price={product.price}
+//               image={product.thumbnail}
+//             />
+//           )
+//         })}
+//       </div>
+//     )
+//   })
+
+// root.render({
+//   $$typeof: Symbol.for('react.element'),
+//   type: "ch",
+//   ref: null,
+//   props: {
+//     title: 'iPhone 13',
+//     image: 'https://i.dummyjson.com/data/products/1/thumbnail.jpg',
+//     brand: 'Apple',
+//     price: 899,
+//     key: 12
+//   }
+// })
+
+root.render(<Ch />);
