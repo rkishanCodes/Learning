@@ -1,4 +1,5 @@
 // async function delay() {
+// async function delay() {
 //   return new Promise((resolve, reject) => {
 //       // resolve("hi");
 //   });
