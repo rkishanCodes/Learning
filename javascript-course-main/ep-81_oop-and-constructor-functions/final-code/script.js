@@ -14,21 +14,26 @@
 //   },
 // }
 
-
 function CreateUser(firstName, lastName, age) {
-  this.firstName = firstName
-  this.lastName = lastName
-  this.age = age
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.age = age;
 }
 
-CreateUser.prototype.getBirthYear = function() {
-  return new Date().getFullYear() - this.age
-}
+CreateUser.prototype.getBirthYear = function () {
+  return new Date().getFullYear() - this.age;
+};
+// CreateUser.getBirthYear = function () {
+//   return new Date().getFullYear() - this.age;
+// };
 
-CreateUser.prototype.getFullName = function() {
-  return this.firstName + ' ' + this.lastName
-}
+console.dir(CreateUser);
 
-const user1 = new CreateUser('Aman', 'Mishra', 32)
-const user2 = new CreateUser('Anurag', 'Singh', 72)
+// CreateUser.prototype.getFullName = function() {
+//   return this.firstName + ' ' + this.lastName
+// }
 
+const user1 = new CreateUser("Aman", "Mishra", 32);
+console.dir(user1);
+
+const user2 = new CreateUser("Anurag", "Singh", 72);
