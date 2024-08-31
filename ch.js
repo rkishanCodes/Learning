@@ -1,12 +1,16 @@
-var h = 5;
-
-switch ("b") {
-  case "a":
-    console.log("a");
-    break;
-  case "b":
-    console.log(`${h}`);
-    break;
-  default:
-    console.log("defulat");
+function main() {
+  let a=0;
+  console.log(a);
+  return function () {
+    a++;
+    console.log(a);
+  };
 }
+
+child=main();
+
+child()
+child()
+child()
+
+main()
