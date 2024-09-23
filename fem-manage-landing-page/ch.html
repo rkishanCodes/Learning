@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://unpkg.com/a11y-slider@latest/dist/a11y-slider.css" />
+</head>
+<style>
+  .slider {
+    display: flex;
+  }
+
+  .slider > * {
+    width: 100%;
+    flex: 0 0 auto;
+  }
+</style>
+<body>
+
+  <ul class="slider">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul>
+
+  <script src="https://unpkg.com/a11y-slider@latest/dist/a11y-slider.js" defer></script>
+
+  <script>
+    window.addEventListener("DOMContentLoaded", function() {
+      const slider = new A11YSlider(document.querySelector('.slider'), {
+        adaptiveHeight: true,
+        dots: false
+      });
+    });
+  </script>
+</body>
+</html>
