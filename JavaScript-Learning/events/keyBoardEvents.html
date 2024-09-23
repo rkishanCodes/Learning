@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .box {
+    width: 100px;
+    height: 100px;
+    /* background-color: blue; */
+    /* cursor: pointer; */
+    margin: 12px 0;
+  }
+</style>
+
+<body>
+
+
+  <input type="text" class="box" id="keydown" placeholder="keydown">
+  <input type="text" class="box" id="keyup" placeholder="keyup">
+  <input type="text" class="box" id="keypress" placeholder="keypress">
+
+
+
+
+  <script>
+
+    // - **keydown:** Occurs when a key is pressed down.
+    const keydown = document.getElementById('keydown');
+    keydown.addEventListener('keydown', (e) => {
+      console.log("object");
+      console.log(e.key);
+      // alert('You pressed a key keydown');
+    })
+
+    // - **keyup:** Occurs when a key is released.
+    const keyup = document.getElementById('keyup');
+    keyup.addEventListener('keyup', (e) => {
+      console.log(e.key);
+      // alert('You released a key ');
+    })
+
+    // - **keypress:** Occurs when a key is pressed and released.
+    const keypress = document.getElementById('keypress');
+    keypress.addEventListener('keypress', (event) => {
+      // console.log(keypress.value);
+      alert('You pressed a key ');
+      console.log(event.key);
+    })
+    //However, it is important to note that the keypress event is deprecated and is not recommended for use in modern web development. Instead, it is recommended to use the keydown and keyup events to handle key presses and releases separately.
+
+    // document.addEventListener('keydown', function(event) {
+    //   if (event.key === 'ArrowDown') {
+    //     console.log('Down arrow key pressed');
+    //   } else if (event.key === 'ArrowUp') {
+    //     console.log('Up arrow key pressed');
+    //   } else if (event.key === 'ArrowLeft') {
+    //     console.log('Left arrow key pressed');
+    //   } else if (event.key === 'ArrowRight') {
+    //     console.log('Right arrow key pressed');
+    //   } else if (event.key === 'Enter') {
+    //     console.log('Enter key pressed');
+    //   } else if (event.key === 'Escape') {
+    //     console.log('Escape key pressed');
+    //   } else if (event.key === ' ') {
+    //     console.log('Spacebar key pressed');
+    //   } else if (event.key === 'Shift') {
+    //     console.log('Shift key pressed');
+    //   } else if (event.key === 'Control') {
+    //     console.log('Control key pressed');
+    //   } else if (event.key === 'Alt') {
+    //     console.log('Alt key pressed');
+    //   } else {
+    //     console.log('Other key pressed:', event.key);
+    //     // console.log('Other key pressed:', event.keyCode,event.which);
+    //     console.log('Other key pressed:', event.code);
+    //   }
+    // });
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://js.bytescale.com/sdk/v3"></script>
+</head>
+<body>
+
+  <input type="file" onchange="onFileSelected(event)" />
+
+
+  <script>
+
+    //XMLHttpRequest.readyState Read only
+// Returns a number representing the state of the request.
+
+//XMLHttpRequest.response Read only
+//Returns an ArrayBuffer, a Blob, a Document, a JavaScript object, or a string, depending on the value of XMLHttpRequest.responseType, that contains the response entity body.
+
+//The XMLHttpRequest.XMLHttpRequest.responseText Read only
+// Returns a string that contains the response to the request as text, or null if the request was unsuccessful or has not yet been sent.
+// response property is a read-only property that contains the response entity body. 
+
+//XMLHttpRequest.responseXML Read only
+//Returns a Document containing the response to the request, or null if the request was unsuccessful, has not yet been sent, or cannot be parsed as XML or HTML
+ 
+// XMLHttpRequest.status Read only
+// Returns the HTTP response status code of the request.
+
+// XMLHttpRequest.statusText Read only
+// Returns a string containing the response string returned by the HTTP server. Unlike XMLHttpRequest.status, this includes the entire text of the response message ("OK", for example).
+
+
+// XMLHttpRequest.timeout
+// The time in milliseconds a request can take before automatically being terminated.
+
+var xhr = new XMLHttpRequest();
+  // xhr.responseType = 'json';
+
+//   xhr.withCredentials=true
+
+  xhr.onreadystatechange = function() {
+    // console.log("XHR readystate ",xhr.readyState);
+    // console.log("XHR response ",xhr.response,typeof xhr.response);
+    // console.log("XHR responseType ",xhr.responseType);
+    // console.log("XHR status ",xhr.status);
+
+    // console.log("XHR status text",xhr.statusText);
+    
+    // console.log("XHR timeout",xhr.timeout);
+
+    // console.log("XHR  xwithCredentials ",xhr.withCredentials );
+
+        
+
+  if (xhr.readyState == XMLHttpRequest.DONE) {
+      if (xhr.status == 200) {
+        //   console.log(xhr.responseText);
+        //   console.log("XHR responseType ",typeof xhr.responseType);
+        //   console.log(xhr.responseXML);//cannot be parsed as XML or HTML, XMLHttpRequest.responseXML will return null.
+          console.log("XHR status text",xhr.statusText);
+          console.log(JSON.parse(xhr.response));
+        console.log(xhr.response);
+
+      } else {
+          console.error('Error:', xhr.status);
+      }
+  }
+  };
+
+  xhr.open('GET', 'https://dog.ceo/api/breeds/image/random', true);
+
+  xhr.send()
+
+//   var xhr1 = new XMLHttpRequest();
+
+// Define event handler for readyState changes
+// xhr1.onreadystatechange = function() {
+//     switch(xhr1.readyState) {
+//         case XMLHttpRequest.UNSENT:
+//             console.log('State: UNSENT - The request has not been initialized.');
+//             break;
+//         case XMLHttpRequest.OPENED:
+//             console.log('State: OPENED - The request has been opened, but the send() method has not yet been called.');
+//             break;
+//         case XMLHttpRequest.HEADERS_RECEIVED:
+//             console.log('State: HEADERS_RECEIVED - The send() method has been called, and headers and status are available.');
+//             break;
+//         case XMLHttpRequest.LOADING:
+//             console.log('State: LOADING - The response is being received. responseText holds the partial data received up to the moment.');
+//             break;
+//         case XMLHttpRequest.DONE:
+//             console.log('State: DONE - The request is completed, and the response data is fully available.');
+//             break;
+//         default:
+//             console.log('Unknown state');
+//     }
+// };
+
+// Open and send a GET request
+// xhr1.open('GET', 'https://jsonplaceholder.typicode.com/todos/1', true);
+// xhr1.send();
+
+
+//   // Accessing channel property (specific to Mozilla)
+// console.log('Channel:', xhr.channel);
+
+// // Accessing mozAnon property (specific to Mozilla)
+// console.log('mozAnon:', xhr.mozAnon);
+
+// // Accessing mozSystem property (specific to Mozilla)
+// console.log('mozSystem:', xhr.mozSystem);
+
+// // Accessing mozBackgroundRequest property (specific to Mozilla)
+// console.log('mozBackgroundRequest:', xhr.mozBackgroundRequest);
+
+
+  // function uploadFile() {
+  //     var xhr = new XMLHttpRequest();
+  //     xhr.open('POST', 'https://api.example.com/upload', true);
+
+  //     // Set up event listeners for upload progress
+  //     xhr.upload.onprogress = function(event) {
+  //         if (event.lengthComputable) {
+  //             var percentComplete = (event.loaded / event.total) * 100;
+  //             console.log('Upload progress:', percentComplete + '%');
+  //         }
+  //     };
+
+  //     xhr.upload.onload = function() {
+  //         console.log('Upload completed successfully!');
+  //     };
+
+  //     xhr.upload.onerror = function() {
+  //         console.error('Upload failed!');
+  //     };
+
+  //     // Get file input element
+  //     var fileInput = document.getElementById('fileInput');
+      
+  //     // Check if file was selected
+  //     if (fileInput.files.length > 0) {
+  //         // Create FormData object and append file data
+  //         var formData = new FormData();
+  //         formData.append('file', fileInput.files[0]);
+
+  //         // Send FormData containing file data
+  //         xhr.send(formData);
+  //     } else {
+  //         console.error('No file selected.');
+  //     }
+  //   }
+
+
+  // const uploadManager = new Bytescale.UploadManager({
+  //       apiKey: "public_FW25bzmAXfXPiV9aENH9gHyENHvM" // This is your API key.
+  //     });
+
+  //     const onFileSelected = async event => {
+  //       const file = event.target.files[0];
+
+  //       try {
+  //         // The 'data' field supports:
+  //         // - String
+  //         // - Blob
+  //         // - ArrayBuffer
+  //         // - File (i.e. from a DOM file input element)
+  //         const { fileUrl, filePath } = await uploadManager.upload({ data: file });
+
+  //         // --------------------------------------------
+  //         // File successfully uploaded!
+  //         // --------------------------------------------
+  //         // The 'filePath' uniquely identifies the file,
+  //         // and is what you should save to your API.
+  //         // --------------------------------------------
+  //         alert(`File uploaded:\n${fileUrl}`);
+
+  //       } catch (e) {
+  //         alert(`Error:\n${e.message}`);
+  //       }
+  //     }
+
+  </script>
+</body>
+</html>

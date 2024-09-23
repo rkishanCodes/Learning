@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+
+  <style>
+    #gameArea {
+        width: 800px;
+        height: 600px;
+        background-color: #ccc;
+    }
+</style>
+
+
+</head>
+<body>
+  <h1 class="heading" id="heading">heading
+    <p id="adp">adp</p>
+  </h1>
+  <h2 class="heading2">
+    heading 2
+  </h2>
+  <div id="targetElement">Click me!</div>
+
+  <button onclick="exitFullscreen()">Exit Fullscreen</button>
+  <div id="gameArea">
+    Click to capture mouse
+</div>
+<script>
+// // Assume `sourceDocument` is the source document containing the node to be moved
+// var nodeToMove = document.getElementById("adp");
+
+// // Assume `targetDocument` is the target document where you want to move the node
+// var targetDocument = document; // You can set it to any document you want
+
+// // Remove the node from its current document
+// nodeToMove.parentNode.removeChild(nodeToMove);
+
+// // Adopt the node into the target document
+// var adoptedNode = targetDocument.adoptNode(nodeToMove);
+
+// // Now `adoptedNode` is a reference to the adopted node within the target document's DOM tree
+// // You can append it to the DOM or perform other operations as needed
+// targetDocument.body.appendChild(adoptedNode);
+
+// const x = 100; // Horizontal coordinate
+// const y = 50;  // Vertical coordinate
+
+// const caretPosition = document.caretPositionFromPoint(x, y);
+
+// if (caretPosition) {
+//   console.log("Caret position found:");
+//   console.log("Node:", caretPosition.offsetNode);
+//   console.log("Offset:", caretPosition.offset);
+// } else {
+//   console.log("No caret position found at the specified coordinates.");
+// }
+
+// const x = 100; // Horizontal coordinate
+// const y = 100;  // Vertical coordinate
+
+// const range = document.caretRangeFromPoint(x, y);
+
+// if (range) {
+//   console.log("Caret range found:");
+//   console.log("Start container:", range.startContainer);
+//   console.log("Start offset:", range.startOffset);
+//   console.log("End container:", range.endContainer);
+//   console.log("End offset:", range.endOffset);
+// } else {
+//   console.log("No caret range found at the specified coordinates.");
+// }
+
+
+
+// const element = document.createElement('div');
+// const attribute = document.createAttribute('class');//the document.createAttribute() method in the DOM specification only accepts one argument, which is the name of the attribute.
+
+
+// attribute.value = 'example-class';
+// element.setAttributeNode(attribute);
+
+// // Adding content using textContent
+// element.textContent = 'This is some content added to the div element.';
+
+// // Or you can use innerHTML
+// // element.innerHTML = '<p>This is some content added to the div element.</p>';
+
+// // Append the element to the document body
+// document.body.appendChild(element);
+
+
+
+// // Create a new CDATA section
+// const cdataSection = document.createCDATASection('This is a CDATA section with <markup>');
+
+// // Get a reference to the node you want to append the CDATA section to
+// const targetNode = document.getElementById('heading'); // Replace 'targetElementId' with the ID of the target node
+
+// // Append the CDATA section to the target node
+// targetNode.appendChild(cdataSection);
+
+// // Create a new comment node
+// const commentNode = document.createComment('This is a comment');
+
+// // Get a reference to the element you want to append the comment to
+// const targetElement = document.getElementById('heading'); // Replace 'targetElementId' with the ID of the target element
+
+// // Append the comment node to the target element
+// targetElement.appendChild(commentNode);
+
+
+// var divElement = document.createElement("div");
+// divElement.setAttribute("id", "myDiv");
+// divElement.textContent = "This is a dynamically created div element.";
+// document.body.appendChild(divElement);
+
+
+// var mouseEvent = new MouseEvent('click', {
+//     bubbles: true,
+//     cancelable: true,
+//     clientX: 100,
+//     clientY: 100
+// });
+// // var targetElement = document.getElementById('heading'); // Replace 'yourElementId' with the actual ID of the element you want to trigger the event on
+// // targetElement.dispatchEvent(mouseEvent);
+
+// var targetElement = document.getElementById('targetElement');
+// if (targetElement) {
+//     targetElement.dispatchEvent(mouseEvent);
+// } else {
+//     console.error("Element with ID 'targetElement' not found.");
+// }
+
+
+// var root = document.getElementById("heading");
+// var nodeIterator = document.createNodeIterator(root, NodeFilter.SHOW_ELEMENT, {
+//     acceptNode: function(node) {
+//         return NodeFilter.FILTER_ACCEPT;
+//     }
+// });
+
+// var node;
+// while ((node = nodeIterator.nextNode()) !== null) {
+//     console.log(node.nodeName);
+// }
+
+
+// var pi = document.createProcessingInstruction('xml-stylesheet', 'href="style.css" type="text/css"');
+
+// var range = document.createRange();
+// var paragraph = document.getElementById('heading');
+
+// range.selectNodeContents(paragraph);
+
+// var selection = window.getSelection();
+// selection.removeAllRanges();
+// selection.addRange(range);
+
+
+// var paragraph = document.createElement("p");
+// var textNode = document.createTextNode("This is a text node.");
+// paragraph.appendChild(textNode);
+// document.body.appendChild(paragraph);
+
+
+// var root = document.getElementById("heading");
+// var treeWalker = document.createTreeWalker(root, NodeFilter.SHOW_ELEMENT, {
+//     acceptNode: function(node) {
+//         return NodeFilter.FILTER_ACCEPT;
+//     }
+// });
+
+// var node;
+// while ((node = treeWalker.nextNode()) !== null) {
+//     console.log(node.nodeName);
+// }
+
+
+// document.addEventListener('click', function(event) {
+//     var clickedElement = document.elementFromPoint(event.clientX, event.clientY);
+//     console.log(clickedElement);
+// });
+
+// document.addEventListener('click', function(event) {
+//     var elements = document.elementsFromPoint(event.clientX, event.clientY);
+//     console.log(elements);
+// });
+
+
+// function exitFullscreen() {
+//     if (document.fullscreenElement) {
+//         document.exitFullscreen()
+//             .then(() => {
+//                 console.log('Exited fullscreen successfully.');
+//             })
+//             .catch((error) => {
+//                 console.error('Failed to exit fullscreen:', error);
+//             });
+//     } else {
+//         console.log('Document is not in fullscreen mode.');
+//     }
+// }
+
+
+
+// document.exitPictureInPicture()
+//   .then(() => {
+//     console.log('Exited picture-in-picture mode successfully.');
+//   })
+//   .catch((error) => {
+//     console.error('Failed to exit picture-in-picture mode:', error);
+//   });
+
+
+// document.addEventListener('keydown', function(event) {
+//     if (event.key === 'Escape') {
+//         document.exitPointerLock();
+//     }
+// });
+
+
+
+
+// var gameArea = document.getElementById('gameArea');
+
+// gameArea.addEventListener('click', function() {
+//     gameArea.requestPointerLock();
+// });
+
+// document.addEventListener('pointerlockchange', pointerLockChangeHandler);
+
+// function pointerLockChangeHandler() {
+//     if (document.pointerLockElement === gameArea) {
+//         console.log('Pointer locked');
+//         gameArea.addEventListener('mousemove', mouseMoveHandler);
+//     } else {
+//         console.log('Pointer unlocked');
+//         gameArea.removeEventListener('mousemove', mouseMoveHandler);
+//     }
+// }
+
+// function mouseMoveHandler(event) {
+//     var movementX = event.movementX || event.mozMovementX || event.webkitMovementX || 0;
+//     var movementY = event.movementY || event.mozMovementY || event.webkitMovementY || 0;
+
+//     console.log('Mouse moved:', movementX, movementY);
+//     // Perform camera or player movement based on mouse movement
+// }
+
+
+
+// var animations = document.getAnimations();
+// animations.forEach(function(animation) {
+//     console.log('Animation:', animation);
+// });
+
+// var selectedText = document.getSelection().toString();
+// console.log("Selected text:", selectedText);
+
+// var selection = document.getSelection();
+// var startNode = selection.anchorNode;
+// var endNode = selection.focusNode;
+// var startOffset = selection.anchorOffset;
+// var endOffset = selection.focusOffset;
+
+// console.log("Selection start node:", startNode);
+// console.log("Selection end node:", endNode);
+// console.log("Selection start offset:", startOffset);
+// console.log("Selection end offset:", endOffset);
+
+// document.hasStorageAccess().then(function(hasAccess) {
+//     if (hasAccess) {
+//         console.log('Document has storage access.');
+//     } else {
+//         console.log('Document does not have storage access.');
+//     }
+// }).catch(function(error) {
+//     console.error('Error checking storage access:', error);
+// });
+
+
+
+// // Create a new DocumentFragment
+// var docFragment = document.createDocumentFragment();
+
+// // Create some elements to populate the DocumentFragment
+// var divElement = document.createElement('div');
+// divElement.textContent = 'This is a div element.';
+// docFragment.appendChild(divElement);
+
+// var spanElement = document.createElement('span');
+// spanElement.textContent = 'This is a span element.';
+// docFragment.appendChild(spanElement);
+
+// // Now the docFragment variable holds the DocumentFragment with the created elements
+// // Assume docFragment is a DocumentFragment obtained from another document or source
+
+// // Import the document fragment into the current document
+// var importedFragment = document.importNode(docFragment, true);
+
+// // Now you can append the imported fragment to the current document
+// document.body.appendChild(importedFragment);
+
+
+// var div1 = document.createElement('div');
+// div1.textContent = 'First div';
+
+// var div2 = document.createElement('div');
+// div2.textContent = 'Second div';
+
+// document.body.prepend(div1, div2);
+
+// var parentElement = document.getElementById('heading');
+
+// var newNode1 = document.createElement('div');
+// newNode1.textContent = 'New child 1';
+
+// var newNode2 = document.createElement('div');
+// newNode2.textContent = 'New child 2';
+
+// parentElement.replaceChildren(newNode1, newNode2);
+
+document.requestStorageAccess().then(function() {
+console.log("granted");
+}
+).catch(function(error) {
+  console.log("denied");
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

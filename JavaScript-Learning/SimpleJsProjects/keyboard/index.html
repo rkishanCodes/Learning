@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+ table,td,th{
+  border: 2px solid black;
+  text-align: center;
+  padding: 2px;
+ }
+  </style>
+</head>
+<body>
+  
+</body>
+<script>
+  // document.body.innerHTML = "bgkjbk;w
+  // "; by using string we cant use next line so use backtics instead 
+  
+  window.addEventListener('keydown',(e)=>{
+    document.body.innerHTML = `
+  <table >
+  <tr>
+    <th>key</th>
+    <th>keyCode</th> 
+    <th>Code</th>
+  </tr>
+  <tr>
+    <td>${e.key===' ' ? 'Space':e.key}</td>
+    <td>${e.keyCode}</td> 
+    <td>${e.code}</td>
+  </tr>
+
+</table>
+  
+  `
+  })
+
+
+</script>
+</html>

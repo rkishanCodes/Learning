@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+<div class="parent">
+  <div class="day">Monday</div>
+  <div class="day">Tuesday</div>
+  <div class="day">Wednesday</div>
+  <div class="day">Thursday</div>
+
+  <!-- kaj -->
+  <div class="day">Friday</div>
+</div>  
+</body>
+
+<script>
+  // const parent=document.querySelector('parent');//gives null meaning no parent tag
+  const parent=document.querySelector('.parent');//gives null meaning no parent tag
+
+  // console.log(parent);
+  // console.log(parent[0]);//returns undefined
+
+  // console.log(parent.children);// returns html collection
+
+  const children=parent.children;
+  // console.log(children);
+
+  for (const child of children) {
+    // console.log(child);
+// console.log(child.textContent); 
+// child.textContent =  "<b>j<b>" // this will pring as it is
+// child.innerHTML =  "<b>j<b>"// this will rewrite and tag will be used
+  child.innerHTML = "<B>" + child.textContent + "</B>"
+  child.style.fontSize = "18px"
+ }
+
+
+//  console.log(parent.firstElementChild);
+//  console.log(parent.lastElementChild);
+
+ const day= document.querySelector(".day");
+// console.log(day);
+
+// console.log(day.parentElement);
+// console.log(day.nextElementSibling);
+
+// console.log(day.nextSibling);
+
+// console.log(parent.childNodes);
+
+
+const newDiv= document.createElement("div");
+
+console.log(newDiv);
+console.log(typeof newDiv);
+newDiv.style.width="100%";
+newDiv.style.outline="2px solid lime";
+document.body.appendChild(newDiv);
+
+const newButton = document.createElement("button");
+newButton.textContent = "Click Me";
+newDiv.appendChild(newButton);
+
+
+newButton.addEventListener("click", () => {
+
+console.log("ckiched");
+
+}
+)
+
+
+newDiv.id = "newDiv"; // this is possible we can access the div proerteis such as stye, id , className
+// console.log(newDiv.style.width);
+
+newDiv.setAttribute("title","genetrd")
+
+newDiv.appendChild(document.createTextNode("new DIv"));
+
+console.log(newDiv.innerHTML);
+console.log(newDiv.innerText);
+
+newDiv.classList.add('new-element-class');
+newDiv.classList.remove('new-element-class');
+
+newDiv.classList.toggle('active');
+newDiv.classList.remove('active');
+
+
+//insertAdjacentHTML()
+
+// console.log("insertAdjacentHTML()");
+
+//element.insertAdjacentHTML(position, text);
+// element is the element around which you want to insert HTML.
+// position is a string specifying the position relative to the element where the new HTML should be inserted. It can take one of the following values:
+// 'beforebegin': Before the element itself.
+// 'afterbegin': Just inside the element, before its first child.
+// 'beforeend': Just inside the element, after its last child.
+// 'afterend': After the element itself.
+// text is the HTML text that you want to insert.
+
+
+// parent.insertAdjacentHTML('beforebegin', "<B>beforebegin</B>");
+// parent.insertAdjacentHTML('afterbegin', "<B>afterbegin</B>");
+// parent.insertAdjacentHTML('beforeend', "<B>beforeend</B>");
+// parent.insertAdjacentHTML('afterend', "<B>afterend</B>");
+
+
+const newChildDiv=document.createElement("div");
+// parent.appendChild(newChildDiv)
+newChildDiv.appendChild(document.createTextNode("Sunday"));
+
+const referenceElement = parent.firstElementChild; // or any other reference element
+console.log(referenceElement);
+
+parent.insertBefore(newChildDiv, referenceElement);
+
+</script>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+//     var xhr = new XMLHttpRequest();
+//     // console.log(typeof XMLHttpRequest.DONE);
+// xhr.onreadystatechange = function() {
+//     if (xhr.readyState === XMLHttpRequest.DONE) {
+//         console.log('Request completed.');
+//         console.log(xhr.responseText);
+//     }
+// };
+// xhr.open('GET', 'https://jsonplaceholder.typicode.com/todos/10', true);
+// xhr.send();
+
+// Abort the request after 2 seconds
+// setTimeout(function() {
+//     xhr.abort();
+//     console.log('Request aborted.');
+//     console.log(xhr.status);
+//     console.log(XMLHttpRequest.DONE);//don constant e give as it is pre deinfed
+// }, 2000);
+
+// error: Fired when the request encountered an error. This event is useful for handling network errors or server-side errors.
+
+
+// var ch = new XMLHttpRequest();
+// ch.onerror = function(e) {
+//     console.error('Request encountered an error boi.',e);
+// };
+
+// ch.addEventListener("error", function(event) {
+//     console.error('An error occurred: boys', event);
+// });
+
+// ch.open('GET', 'https://api.example.com/nonexistent', true);
+// ch.send();
+
+// load: 
+//Fired when an XMLHttpRequest transaction completes successfully. This event is useful for handling successful responses from the server.
+
+// var xhr = new XMLHttpRequest();
+// xhr.onload = function() {
+//     console.log('Request completed successfully.');
+//     console.log('Response:', xhr.responseText);
+// };
+// xhr.open('GET', 'https://jsonplaceholder.typicode.com/todos/10', true);
+// xhr.send();
+
+//loadend: 
+//Fired when a request has completed, whether successfully (after load) or unsuccessfully (after abort or error). This event is useful for handling cleanup tasks after a request completes.
+// var xhr = new XMLHttpRequest();
+// xhr.onloadend = function() {
+//     console.log('Request completed.');
+// };
+// xhr.open('GET', 'https://jsonplaceholder.typicode.com/todos/10000000', true);// it excetes no ,ater what
+// xhr.send();
+
+// var xhr = new XMLHttpRequest();
+// xhr.onloadstart = function() {
+//     console.log('Request started loading data.',xhr.readyState);
+// };
+// xhr.open('GET', 'https://jsonplaceholder.typicode.com/todos/100', true);
+
+
+// var xhr = new XMLHttpRequest();
+// xhr.onprogress = function(event) {
+//     if (event.lengthComputable) {
+//         var percentComplete = (event.loaded / event.total) * 100;
+//         console.log('Progress:', percentComplete.toFixed(2) + '%');
+//     } else {
+//         console.log('Progress: unable to compute', xhr.responseText);
+//     }
+// };
+// xhr.open('GET', 'https://jsonplaceholder.typicode.com/todos/100', true);
+// xhr.send();
+
+
+
+// var xhr = new XMLHttpRequest();
+// xhr.onreadystatechange = function() {
+//     console.log('Ready state changed:', xhr.readyState);
+// };
+
+// xhr.addEventListener('readystatechange', function() {
+//   console.log('Ready state changed:', xhr.readyState);
+
+// })
+// xhr.open('GET', 'https://jsonplaceholder.typicode.com/todos/100', true);
+// xhr.send();
+
+var xhr = new XMLHttpRequest();
+xhr.ontimeout = function() {
+    console.error('Request timed out.');
+};
+xhr.timeout = 5000; // Set a timeout of 5 seconds
+xhr.open('GET', 'https://jsonplaceholder.typicode.com/todos/100', true);
+xhr.send();
+
+
+  </script>
+</body>
+</html>

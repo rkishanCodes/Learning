@@ -1,0 +1,15 @@
+li::before {
+  content: "nise ";
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: lightblue;
+  transition: all 0.5s ease, transform 0.5s;
+}
+
+.box:hover {
+  background-color: coral;
+  transform: scale(1.2);
+}

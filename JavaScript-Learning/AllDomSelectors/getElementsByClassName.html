@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="heading">
+    heading 1s
+  </div>
+  <div class="heading">
+    heading 2
+  </div>
+
+  <h2 class="heading">heading</h2>
+
+
+    <input type="text" name="1" class="input">
+    <input type="text" name="2" class="input">
+
+  <script>
+    // Document: getElementsByClassName() method
+
+//The getElementsByClassName method of Document interface returns an array-like object of all child elements which have all of the given class name(s).
+
+// Warning: This is a live HTMLCollection. Changes in the DOM will reflect in the array as the changes occur. If an element selected by this array no longer qualifies for the selector, it will automatically be removed. Be aware of this for iteration purposes.
+
+
+
+//syntax:getElementsByClassName(names)
+// names
+// A string representing the class name(s) to match; multiple class names are separated by whitespace.
+
+// Return value
+// A live HTMLCollection of found elements.
+
+console.log(document.getElementsByClassName("heading"));// returns html collection
+const classElement=document.getElementsByClassName("heading");
+
+// for (let i = 0; i < classElement.length; i++) {
+//   console.log(classElement[i]);
+// }
+
+console.log(classElement[0]);
+console.log(classElement.item(0));
+console.log(classElement[10]);
+console.log(classElement.item(10));
+
+//classElement[0] directly accesses the element by index, similar to accessing elements in an array.
+//classElement.item(0) uses the item() method to access the element by index.
+//If there's no element at the specified index, accessing it directly by index (classElement[0]) returns undefined, while using item() returns null.
+
+console.log(classElement.length); // Outputs the number of elements with the class name "heading"
+
+console.log(classElement[0]); // Accesses the first element with the class name "heading"
+console.log(classElement.item(0)); // Accesses the first element with the class name "heading"
+
+console.log(document.getElementsByClassName("input").namedItem("2")); // Accesses an element by name
+
+
+console.log("****************************************************************")
+for (let element of classElement) {
+    console.log(element); // Outputs each element in the HTMLCollection
+}
+
+
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  The open() method is used to initialize a request <br><br>
+  The send() method is used to send the HTTP request to the server after it has been configured using the open() method.
+
+  <br><br>
+  The purpose of creating an XMLHttpRequest object is to enable communication between the browser and the server,
+  <br>
+
+
+  <br><br>
+  The onreadystatechange event is triggered whenever the readyState property of the XMLHttpRequest object changes. This
+  event is used to monitor the state of the HTTP request and handle the response asynchronously.
+
+
+
+  <script>
+
+    var xhr = new XMLHttpRequest();
+    // console.log(xhr);
+
+    // console.log(xhr.onreadystatechange);
+
+    xhr.onreadystatechange = function () {
+      // console.log("XHR readystate ", xhr.readyState);
+      // console.log("XHR status ",xhr.status);
+      console.log(XMLHttpRequest.DONE);
+      if (xhr.readyState == XMLHttpRequest.DONE) {
+        if (xhr.status == 200) {
+          console.log(xhr.responseText);
+        } else {
+          console.error('Error:', xhr.status);
+        }
+      }
+    };
+    xhr.open('GET', 'https://jsonplaceholder.typicode.com/todos/1', true);
+    // console.log(xhr.readyState);
+
+    const ch = {
+      userId: 'example',
+      password: 'password123'
+    }
+    const data = JSON.stringify(ch);
+
+    xhr.send();
+    // console.log(xhr.readyState);
+
+
+  </script>
+</body>
+
+</html>

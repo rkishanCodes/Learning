@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XMLHttpRequest Ready States</title>
+<style>
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+</style>
+</head>
+<body>
+
+<h2>XMLHttpRequest Ready States</h2>
+
+<table>
+  <tr>
+    <th>Value</th>
+    <th>State</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>UNSENT</td>
+    <td>Client has been created. open() not called yet.</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>OPENED</td>
+    <td>open() has been called.</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>HEADERS_RECEIVED</td>
+    <td>send() has been called, and headers and status are available.</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>LOADING</td>
+    <td>Downloading; responseText holds partial data.</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>DONE</td>
+    <td>The operation is complete.</td>
+  </tr>
+</table>
+
+
+<script>
+  const requestUrl='https://randomuser.me/api/'
+  const xhr=new XMLHttpRequest();
+  xhr.open('GET',requestUrl)
+  xhr.send();
+
+  xhr.onreadystatechange=function(){ // arrowing ufucntion this cannot be used. this will denote window which is global object
+    console.log(xhr.readyState);
+    console.log(xhr);
+    console.log(xhr.status);
+    // console.log(xhr.responseText);
+    const data=this.response
+    // console.log(Object.keys(data));
+    // console.log(typeof data);
+    jsonData=JSON.parse(data)
+    console.log(jsonData);
+    console.log(jsonData.results[0].gender);
+    console.log(jsonData.results[0].name);
+    console.log(jsonData.results[0].name.title);
+    console.log(jsonData.results[0].name.first);
+    console.log(Object.keys(jsonData['results']));
+    console.log(jsonData.results[0].dob.date);
+
+    // console.log(data["resutls"]);
+
+  }
+
+
+  
+
+
+</script>
+</body>
+</html>

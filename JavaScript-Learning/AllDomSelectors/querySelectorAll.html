@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="hello">hello
+    <h1>heading1</h1>
+  </div>
+  <div class="hi">hi
+    <h1>heading2</h1>
+
+  </div>
+
+
+  <input type="text" placeholder="enter">
+  <input type="number" placeholder="enter">
+
+
+  <script>
+    // Document: querySelectorAll() method
+    //syntax: querySelectorAll(selectors)
+//     selectors
+// A string containing one or more selectors to match against. This string must be a valid CSS selector string; if it's not, a SyntaxError exception is thrown. See Locating DOM elements using selectors for more information about using selectors to identify elements. Multiple selectors may be specified by separating them using commas.
+
+const element=document.querySelectorAll(".hi");
+console.log(element);
+
+element.forEach((element, index)=> {
+    console.log("Element " + (index ) + ": ", element);
+});
+
+const array = ["a", "b", "c"];
+const arrayEntries = array.entries();
+
+console.log(arrayEntries[0]);
+
+// for (const element of arrayEntries) {
+//   console.log(element);
+// }
+
+// [0, 'a']
+// [1, 'b']
+// [2, 'c']
+
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        function add(a) {
+            console.log(a);
+            return function (b) {
+                console.log("returned function of a", b);
+            }
+        }
+
+        returnb = add(1)
+        returnb(2)
+
+        // function introduce(...greeting) {
+        //     console.log(greeting);
+        //     console.log(`${greeting}`);
+        //         console.log(`${greeting}, my name is ${this.name}.`);
+        //     }
+
+        //     const person = {
+        //         name: 'Alice'
+        //     };
+
+        //     introduce.call(person, 'Hello','HHHIji'); // Output: Hello, my name is Alice.
+
+        // function introduce(greeting, signOff) {
+        //     console.log(greeting);
+        //         console.log(`${greeting}, my name is ${this.name}. ${signOff}`);
+        //     }
+
+        //     const person = {
+        //         name: 'Bob'
+        //     };
+
+        //     introduce.apply(person, ['Hi', 'Nice to meet you!']); // Output: Hi, my name is Bob. Nice to meet you!
+
+
+        function introduce(greeting,a) {
+            console.log(`${greeting},${a}, my name is ${this.name}.`);
+        }
+
+        const person = {
+            name: 'Charlie'
+        };
+
+        const boundIntroduce = introduce.bind(person,"kumli");
+
+        boundIntroduce('Hey'); // Output: Hey, my name is Charlie.
+        boundIntroduce('Hey'); // Output: Hey, my name is Charlie.
+    </script>
+</body>
+
+</html>

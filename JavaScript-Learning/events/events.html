@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htnml Events </title>
+</head>
+<body>
+    <h2>Amazing image</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px"  id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a  href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+<script>
+// document.getElementById("photoshop").onclick=()=>alert("photoshop clicked")
+//  document.getElementById("photoshop").addEventListener('click',(e)=>{
+//   // alert(" clicked")
+//   console.log(e);
+//   },false)
+
+//   document.body.addEventListener('click',(e)=>{
+//     // console.log("clicked");
+//     const newDiv = document.createElement("div");
+
+//     newDiv.style.position="absolute";
+//     newDiv.style.top=`${e.pageY}px`;
+//     newDiv.style.left=`${e.pageX}px`;
+
+//     newDiv.style.width="100px"
+//     newDiv.style.height="100px"
+//     newDiv.style.borderRadius = "50%";
+//     newDiv.style.backgroundColor = "blue";
+//     document.body.appendChild(newDiv);
+
+//   }
+    
+    
+//   )
+
+
+// Capturing Phase:
+// Propagation direction: Top-down (from the root of the document to the target element).
+// Event handlers: Event handlers attached during this phase are executed.
+// Use cases: Less commonly used in practice, but can be useful for intercepting events before they reach the target element.
+// Bubbling Phase:
+// Propagation direction: Bottom-up (from the target element to the root of the document).
+// Event handlers: Event handlers attached during this phase are executed.
+// Use cases: Default behavior in most cases. Event handlers here allow you to handle events after they have occurred on the target element and to propagate them up the DOM hierarchy.
+
+
+// document.addEventListener('click', function(event) {
+//   const timestamp = event.timeStamp;
+//   const eventDate = new Date(timestamp);
+  
+//   const options = { 
+//     weekday: 'long', 
+//     year: 'numeric', 
+//     month: 'long', 
+//     day: 'numeric', 
+//     hour: 'numeric', 
+//     minute: 'numeric', 
+//     second: 'numeric', 
+//     timeZoneName: 'short' 
+//   };
+  
+//   const formattedDate = eventDate.toLocaleDateString('en-US', options);
+  
+//   console.log('Event occurred at:', formattedDate);
+//   console.log(event.clientX);
+//   console.log(event.clientY);
+
+// });
+
+
+// document.addEventListener('DOMContentLoaded', function(event) {
+//   const timestamp = event.timeStamp;
+//   const eventDate = new Date(timestamp);
+  
+//   const options = { 
+//     weekday: 'long', 
+//     year: 'numeric', 
+//     month: 'long', 
+//     day: 'numeric', 
+//     hour: 'numeric', 
+//     minute: 'numeric', 
+//     second: 'numeric', 
+//     timeZoneName: 'short' 
+//   };
+  
+//   const formattedDate = eventDate.toLocaleDateString('en-US', options);
+  
+//   console.log('Document loaded at:', formattedDate);
+// });
+
+// The main difference between capturing and bubbling phases lies in the direction of event propagation and the order in which event handlers are executed:
+
+// Capturing Phase:
+// Propagation direction: Top-down (from the root of the document to the target element).
+// Event handlers: Event handlers attached during this phase are executed.
+// Use cases: Less commonly used in practice, but can be useful for intercepting events before they reach the target element.
+// Bubbling Phase:
+// Propagation direction: Bottom-up (from the target element to the root of the document).
+// Event handlers: Event handlers attached during this phase are executed.
+// Use cases: Default behavior in most cases. Event handlers here allow you to handle events after they have occurred on the target element and to propagate them up the DOM hierarchy.
+
+
+
+
+
+
+// document.getElementById("photoshop").addEventListener('click',(e)=>{
+//   // alert(" clicked")
+//   console.log("photo shop is clicked");// first event handlers will be executed
+//   },true)
+
+// document.getElementById("photoshop").addEventListener('click',(e)=>{
+//   // alert(" clicked")
+//   console.log("photo shop is clicked");//Event handlers here allow you to handle events after they have occurred on the target element and to propagate them up the DOM hierarchy.
+//   },false)
+
+
+
+// document.getElementById("images").addEventListener('click',(e)=>{
+//   // alert(" clicked")
+//   console.log(" image is clicked");
+//   },false)
+
+// document.getElementById("photoshop").addEventListener('click',(e)=>{
+//   // alert(" clicked")
+//   console.log("photo shop is clicked");
+//   },false)
+
+//   //first event then eventhanlder shop then image 
+
+
+//   document.getElementById("images").addEventListener('click',(e)=>{
+//   // alert(" clicked")
+//   console.log(" image is clicked");
+//   },false)
+
+// document.getElementById("photoshop").addEventListener('click',(e)=>{
+//   // alert(" clicked")
+//   console.log("photo shop is clicked");
+//   },true)
+
+//   //first event handler then event  then image 
+
+//   document.getElementById("images").addEventListener('click',(e)=>{
+//   // alert(" clicked")
+//   console.log(" image is clicked");
+//   },true)
+
+// document.getElementById("photoshop").addEventListener('click',(e)=>{
+//   // alert(" clicked")
+//   console.log("photo shop is clicked");
+//   },false)
+
+//   //first image  then event  then eventhandler 
+
+  document.getElementById("images").addEventListener('click',(e)=>{
+  // alert(" clicked")
+  console.log(" image is clicked");
+//   e.stopPropagation()
+  },true) // first this is executed the gogole will be execet thats it didint prevent 
+
+document.getElementById("photoshop").addEventListener('click',(e)=>{
+  // alert(" clicked")
+
+  console.log("photo shop is clicked");
+  },true)
+
+  //first image  then eventhandler  then event 
+  
+//   document.getElementById("google").addEventListener('click',(e)=>{
+//   // alert(" clicked")
+//   e.preventDefault();
+//   console.log("google is clicked");
+//   },true)
+
+// document.getElementById("images").addEventListener('click',(e)=>{
+//     console.log(e.target);
+//     // e.target.remove()// removes the ele
+//     // e.target.parentNode.remove()// removes the ele
+//     // e.target.parentNode.parentNode.remove()// removes the ele
+//     console.log(e.target.parentNode);
+//     console.log(e.currentTarget);
+
+// })
+
+
+
+</script>
+</body>
+
+</html>

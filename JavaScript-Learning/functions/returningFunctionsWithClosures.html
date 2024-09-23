@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  //   const a=9;
+  //   const b=10;
+
+  //   function parent(){
+  //     console.log(add())
+  //     function add(){
+  //     console.log(a+b) 
+
+  //     return add
+
+  //   }
+  //   }
+
+  // console.log(parent())
+
+  const numbers = [1, 2, 3, 4, 5];
+
+// Check if there is at least one even number in the array
+const hasEvenNumber = numbers.some((number) => { return number % 2 === 0});
+
+console.log(hasEvenNumber); // Output: true (because 2 and 4 are even)
+
+
+function add(a=9,b=""){
+
+  console.log(arguments)
+
+  console.log(a*b)
+
+}
+
+add(3)
+
+  </script>
+</body>
+</html>

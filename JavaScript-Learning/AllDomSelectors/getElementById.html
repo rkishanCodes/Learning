@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .heading{
+      color:red;
+    }
+  </style>
+</head>
+<body>
+  <div id="heading" class="headingClass"     style="
+  color:red;
+">
+
+    heading ID
+    <span style="display: none;">hiii</span>
+  </div>
+  <!-- <div id="heading"> 
+    heading ID
+    it will execute but may lead to unexpected behavior -->
+    <!-- any ways willl return the first one -->
+  </div> 
+<img src="heloo.jpg" alt="imageAlt" srcset="" id="image">
+
+
+
+  <script>
+    // console.log(document.getElementById("heading")); 
+    // // document.getElementById("heading") returns the element with the specified id attribute value
+    // console.log(typeof document.getElementById("heading")); 
+    // console.log(document.getElementById("heading1")); // null if not found
+//getElementById() is only available as a method of the global document object, and not available as a method on all element objects in the DOM. 
+//Because ID values must be unique throughout the entire document, there is no need for "local" versions of the function.
+
+
+// const parentDOM = document.getElementById("parent-id");
+//       const test1 = parentDOM.getElementById("test1");
+
+    //Access content of element
+
+    // console.log(document.getElementById("heading")); 
+    // console.log(document.getElementById("heading").innerHTML); // innerHTML, it returns the HTML content of the element as a string.
+
+    
+    // console.log(document.getElementById("heading").textContent); // he textContent property sets or returns the text content of an element and its descendants.
+
+    // console.log(document.getElementById("heading").innerText);///the innerText property is similar to textContent, but it considers the CSS styling and visibility of elements when calculating the displayed text. 
+
+    // console.log(typeof "<div class='hi'");
+
+    //Access Element Properties:
+
+  //   const element=document.getElementById("heading");
+  //   // console.log(element.innerHTML);
+  // console.log(element.style);
+  // console.log(element.style.color);// so it has to be inline
+  // element.style.color="black"// it will result in inline css :- <div id="heading" class="heading" style="color: black;">
+
+
+
+  // console.log(element.className);
+
+  //Attributes
+
+//   const image = document.getElementById("image");
+// image.src = "image.jpg"; // Modifying the src attribute of an image element
+
+
+
+// // Attach Event Listeners
+// const element = document.getElementById("heading");
+// element.addEventListener("click", function() {
+//     console.log("Element clicked!");
+//     element.innerHTML = "<b>New content</b>"; // Changing the content of the element
+
+// }); // Attaching an event listener to the element
+
+
+// toggle effect click
+
+
+  
+// const element = document.getElementById("heading");
+
+// let contentCHanged=false; 
+// element.addEventListener("click", function(){
+//   if(contentCHanged){
+//     element.innerHTML = "original content"
+//     contentCHanged=false;
+//   }
+//   else{
+//     element.innerHTML = "<b>New content</b>";
+
+//     contentCHanged=true;
+//   }
+// })
+
+
+// const element = document.getElementById("heading");
+// let isContentChanged = false;
+
+// element.addEventListener("click", function() {
+//     if (isContentChanged) {
+//         // Revert to the original content
+//         element.innerHTML = "heading ID";
+//     } else {
+//         // Change the content
+//         element.innerHTML = "<b>New content</b>";
+//     }
+    
+//     // Toggle the state
+//     isContentChanged = !isContentChanged;
+// });
+
+
+
+//get Atribute
+
+// syntax : getAttribute(attributeName)
+
+// const element =document.getElementById("heading");
+// console.log(element.getAttribute("id"));
+// console.log(element.getAttribute("class"));
+// console.log(element.getAttribute("style"));
+// console.log(typeof element.getAttribute("style"));// retrun string
+
+// console.log(document.getElementById("image").getAttribute("src"));
+// console.log(document.getElementById("image").getAttribute("alt"));
+// console.log( document.getElementById("image").getAttribute("srcset")=="");//return empty string
+
+//setAttribute() method
+
+//syntax :- setAttribute(name, value)
+
+//name
+//A string specifying the name of the attribute whose value is to be set. The attribute name is automatically converted to all lower-case when setAttribute() is called on an HTML element in an HTML document.
+
+// value
+// A string containing the value to assign to the attribute. Any non-string value specified is converted automatically into a string.
+
+const newDiv=document.createElement("div");
+const content=document.createTextNode("new div")
+newDiv.appendChild(content);
+
+newDiv.setAttribute("ID","neWdiv")
+newDiv.setAttribute("class","newDivClass")
+newDiv.setAttribute("style","color:red;background-color:blue")
+document.body.appendChild(newDiv);
+
+
+//Element: removeAttribute() method
+
+//removeAttribute(attrName)
+
+// /attrName
+//A string specifying the name of the attribute to remove from the element. If the specified attribute does not exist, removeAttribute() returns without generating an error.
+
+  
+newDiv.removeAttribute("style")  
+
+// newDiv.style.backgroundColor="blue"
+  </script>
+</body>
+</html>
