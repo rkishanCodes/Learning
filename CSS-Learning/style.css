@@ -1,0 +1,66 @@
+/* .react {
+  color: red;
+}
+
+
+
+.html {
+  color: blue;
+  font-size: 200px ;
+} */
+
+
+#html {
+
+  font-size: 20px;
+}
+
+ul li {
+  color: brown;
+}
+
+li {
+  color: inherit;
+}
+
+a:hover {
+  color: red;
+}
+
+p:hover {
+  color: red;
+}
+
+input:focus {
+  border-color: red;
+  outline: 2px solid lime;
+}
+
+/* li:nth-child(odd){
+    color:red ;
+}
+
+  p:last-of-type {
+            color: orange;
+        } */
+
+/* p:only-child {
+  color: gray;
+} */
+
+
+p:not(.special) {
+    color: inherit;
+}
+
+
+
+
+/* .html{
+  background-color: antiquewhite;
+} */
+
+#html{
+  background-color: aqua;
+}
+

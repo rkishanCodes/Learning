@@ -1,0 +1,46 @@
+img {
+  display: absolute;
+  width: 200px;
+
+  float: left;
+  padding: 4px 20px;
+}
+
+p {
+  background-color: red;
+  opacity: 0.5;
+  clear: right;
+}
+
+.box{
+    display: flow-root;
+}
+
+/* .box {
+  width: 100px;
+  height: 100px;
+  float: left;
+  position: absolute;
+} */
+
+.box1 {
+  background-color: aqua;
+  /* float: left; */
+  /* position: absolute; */
+  opacity: 1;
+  left: 3rem;
+}
+.box2 {
+  background-color: rgb(0, 255, 81);
+  width: 100px;
+  overflow: hidden;
+  margin-left: auto;
+}
+.box3 {
+  background-color: rgb(255, 0, 0);
+  opacity: 1;
+}
+
+.box4 {
+  background-color: rgb(38, 0, 255);
+}
