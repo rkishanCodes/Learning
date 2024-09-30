@@ -32,3 +32,7 @@ const data: (User | number | string)[] = [
     // hobbies: ["reading", "painting", "traveling"]
   },
 ];
+
+type Status = "single" | "married" | 1 | "nice" | number;
+
+let ustatus: Status;

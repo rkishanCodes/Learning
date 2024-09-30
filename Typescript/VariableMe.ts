@@ -7,6 +7,9 @@ let mynum=0
 // mynum.lengh
 
 
+// let a=9;
+// a="kishan"
+// console.log(a);
 let bool :boolean = false
 
 bool=true

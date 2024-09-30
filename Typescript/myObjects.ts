@@ -35,11 +35,11 @@ let user: User = {
 
 user.name = "ch";
 
-// function createUser(user: User): User {
-//   return user;
-// }
+function createUser(user: User): User {
+  return user;
+}
 
-// createUser({ name: "kishan", age: 89 });
+createUser({ name: "kishan", age: 89 ,_id:"ge"});
 
 export {};
 
