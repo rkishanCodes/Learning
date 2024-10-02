@@ -3,3 +3,5 @@
 let user: [string, number];
 
 user = ["kishan", 30];
+
+// user.push(true)
